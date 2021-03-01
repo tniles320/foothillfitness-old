@@ -1,0 +1,36 @@
+{
+  "name": "foothillfitness",
+  "version": "1.0.0",
+  "description": "Fitness Equipment and Service website",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.18",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tniles320/foothillfitness.git"
+  },
+  "author": "Taylor Niles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tniles320/foothillfitness/issues"
+  },
+  "homepage": "https://github.com/tniles320/foothillfitness#readme"
+}
