@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AUTH from "../../utils/AUTH";
+import ADMIN from "../../utils/ADMIN";
 
 function LoginForm() {
   const [userLogin, setUserLogin] = useState({
@@ -9,7 +9,7 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    AUTH.login(userLogin.email, userLogin.password)
+    ADMIN.login(userLogin.email, userLogin.password)
       .then((res) => {
         console.log(res.data.user);
       })

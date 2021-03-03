@@ -3,7 +3,7 @@ import "./style.css";
 function Header() {
   return (
     <div>
-      <h1 id="siteLogo">Hair For Hair</h1>
+      <h1>Foothill Fitness Equipment Sales, Repair & Service</h1>
     </div>
   );
 }

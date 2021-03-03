@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../images/foothill-fitness-logo.jpg";
 import "./style.css";
 
 // topNav visible on desktop screens
 const TopNav = () => {
   const links = [
-    ["/login", "Login"],
-    ["/cart", "Cart"],
+    ["/equipment", "Equipment"],
+    ["/dealers", "Our Dealers"],
+    ["/about", "About Us"],
+    ["/contact", "Contact"],
+    ["/list", "My List"],
   ].map(([to, label]) => (
     <Link key={to} to={to}>
       {label}
@@ -15,8 +19,12 @@ const TopNav = () => {
 
   return (
     <div id="topNav">
-      <label htmlFor="search">Search</label>
-      <input id="search" placeholder="...Search"></input>
+      <img
+        src={logo}
+        id="profile-image"
+        className="card-img"
+        alt="taylor niles"
+      ></img>
       {links}
     </div>
   );
@@ -25,8 +33,11 @@ const TopNav = () => {
 // sideNav component visible on mobile devices
 const SideNav = (props) => {
   const links = [
-    ["/login", "Login"],
-    ["/cart", "Cart"],
+    ["/equipment", "Equipment"],
+    ["/dealers", "Our Dealers"],
+    ["/about", "About Us"],
+    ["/contact", "Contact"],
+    ["/list", "My List"],
   ].map(([to, label]) => (
     <Link key={to} to={to} onClick={props.onCloseClick}>
       {label}
