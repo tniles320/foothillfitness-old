@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
@@ -25,6 +26,13 @@ mongoose.connect(
     useFindAndModify: false,
   }
 );
+
+const directory = path.join(__dirname, "public/uploads");
+app.use("/public/uploads", express.static(directory));
+
+app.get("/api/upload/:file", function (req, res) {
+  res.sendFile(`${__dirname}/public/uploads/${req.params.file}`);
+});
 
 // using api routes
 app.use(routes);

@@ -15,6 +15,7 @@ export default {
   deleteStrength: function (id) {
     return axios.delete(`/api/strength/${id}`);
   },
+
   // Cardio calls
   getCardio: function (id) {
     return axios.get(`/api/cardio/${id}`);
@@ -28,19 +29,21 @@ export default {
   deleteCardio: function (id) {
     return axios.delete(`/api/cardio/${id}`);
   },
-  // Dealer calls
-  getDealer: function (id) {
-    return axios.get(`/api/dealer/${id}`);
+
+  // Brand calls
+  getBrand: function (id) {
+    return axios.get(`/api/brand/${id}`);
   },
-  addDealer: function (dealerData) {
-    return axios.post(`/api/dealer`, dealerData);
+  addBrand: function (brandData) {
+    return axios.post(`/api/brand`, brandData);
   },
-  updateDealer: function (dealerData, id) {
-    return axios.put(`/api/dealer/${id}`, dealerData);
+  updateBrand: function (brandData, id) {
+    return axios.put(`/api/brand/${id}`, brandData);
   },
-  deleteDealer: function (id) {
-    return axios.delete(`/api/dealer/${id}`);
+  deleteBrand: function (id) {
+    return axios.delete(`/api/brand/${id}`);
   },
+
   // Image calls
   getImage: function (id) {
     return axios.get(`/api/image/${id}`);
@@ -53,5 +56,20 @@ export default {
   },
   deleteImage: function (id) {
     return axios.delete(`/api/image/${id}`);
+  },
+
+  // Multer upload calls
+  getUpload: function (file) {
+    return axios.get(`/api/upload/${file}`);
+  },
+  addUpload: function (uploadData) {
+    return axios.post("/api/upload", uploadData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  },
+  deleteUpload: function (id) {
+    return axios.delete(`/api/upload/${id}`);
   },
 };

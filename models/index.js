@@ -2,7 +2,8 @@ module.exports = {
   User: require("./User"),
   Strength: require("./Strength"),
   Cardio: require("./Cardio"),
-  Dealer: require("./Dealer"),
+  Brand: require("./Brand"),
   Image: require("./Image"),
+  Featured: require("./Featured"),
   UserSession: require("./UserSession"),
 };

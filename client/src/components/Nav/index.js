@@ -7,7 +7,7 @@ import "./style.css";
 const TopNav = () => {
   const links = [
     ["/equipment", "Equipment"],
-    ["/dealers", "Our Dealers"],
+    ["/brands", "Our Brands"],
     ["/about", "About Us"],
     ["/contact", "Contact"],
     ["/list", "My List"],
@@ -34,7 +34,7 @@ const TopNav = () => {
 const SideNav = (props) => {
   const links = [
     ["/equipment", "Equipment"],
-    ["/dealers", "Our Dealers"],
+    ["/brands", "Our Brands"],
     ["/about", "About Us"],
     ["/contact", "Contact"],
     ["/list", "My List"],

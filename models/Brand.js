@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const dealerSchema = new Schema({
+const brandSchema = new Schema({
   name: {
     type: String,
     trim: true,
@@ -23,6 +23,6 @@ const dealerSchema = new Schema({
   },
 });
 
-const Dealer = mongoose.model("Dealer", dealerSchema);
+const Brand = mongoose.model("Brand", brandSchema);
 
-module.exports = Dealer;
+module.exports = Brand;

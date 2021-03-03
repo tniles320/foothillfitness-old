@@ -26,6 +26,12 @@ const imageSchema = new Schema({
       ref: "User",
     },
   ],
+  featured: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Featured",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now(),
