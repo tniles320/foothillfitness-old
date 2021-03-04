@@ -5,18 +5,16 @@ const featuredSchema = new Schema({
   headline: {
     type: String,
     trim: true,
-    required: "Name is required",
   },
-  desciption: {
+  description: {
     type: String,
     trim: true,
   },
-  images: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Image",
-    },
-  ],
+  image: {
+    type: String,
+    trim: true,
+    required: "Image is required",
+  },
   link: {
     type: String,
     trim: true,

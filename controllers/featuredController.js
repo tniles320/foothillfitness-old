@@ -2,6 +2,14 @@ const { Featured } = require("../models");
 
 // methods for the booksController
 module.exports = {
+  findAll: function (req, res) {
+    Featured.find({})
+      .then((dbFeatured) => res.json(dbFeatured))
+      .catch((err) => {
+        console.error(err);
+        res.status(422).json(err);
+      });
+  },
   findById: function (req, res) {
     Featured.findById(req.params.id)
       .then((dbFeatured) => res.json(dbFeatured))

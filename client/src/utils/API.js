@@ -58,12 +58,29 @@ export default {
     return axios.delete(`/api/image/${id}`);
   },
 
+  // Featured calls
+  getFeatured: function () {
+    return axios.get(`/api/featured`);
+  },
+  getOneFeatured: function (id) {
+    return axios.get(`/api/featured/${id}`);
+  },
+  addFeatured: function (featuredData) {
+    return axios.post(`/api/featured`, featuredData);
+  },
+  updateFeatured: function (featuredData, id) {
+    return axios.put(`/api/featured/${id}`, featuredData);
+  },
+  deleteFeatured: function (id) {
+    return axios.delete(`/api/featured/${id}`);
+  },
+
   // Multer upload calls
   getUpload: function (file) {
     return axios.get(`/api/upload/${file}`);
   },
   addUpload: function (uploadData) {
-    return axios.post("/api/upload", uploadData, {
+    return axios.post("/api/multer", uploadData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
