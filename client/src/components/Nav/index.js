@@ -8,6 +8,7 @@ const TopNav = () => {
   const links = [
     ["/equipment", "Equipment"],
     ["/brands", "Our Brands"],
+    ["/services", "Services"],
     ["/about", "About Us"],
     ["/contact", "Contact"],
     ["/list", "My List"],
@@ -19,12 +20,14 @@ const TopNav = () => {
 
   return (
     <div id="topNav">
-      <img
-        src={logo}
-        id="profile-image"
-        className="card-img"
-        alt="taylor niles"
-      ></img>
+      <Link to="/">
+        <img
+          src={logo}
+          id="profile-image"
+          className="card-img"
+          alt="taylor niles"
+        ></img>
+      </Link>
       {links}
     </div>
   );
@@ -35,6 +38,7 @@ const SideNav = (props) => {
   const links = [
     ["/equipment", "Equipment"],
     ["/brands", "Our Brands"],
+    ["/services", "Services"],
     ["/about", "About Us"],
     ["/contact", "Contact"],
     ["/list", "My List"],

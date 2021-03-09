@@ -1,5 +1,13 @@
+import { Link } from "react-router-dom";
+
 function ServiceComponent() {
-  return <div></div>;
+  return (
+    <div>
+      <Link to="/services" className="serviceLink">
+        Services
+      </Link>
+    </div>
+  );
 }
 
 export default ServiceComponent;

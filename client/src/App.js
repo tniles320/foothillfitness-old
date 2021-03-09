@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
+import Services from "./pages/Services";
 import NoMatch from "./pages/NoMatch";
 import AdminFeatured from "./pages/AdminFeatured";
 
@@ -10,6 +11,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/services">
+            <Services />
           </Route>
           <Route>
             <NoMatch />

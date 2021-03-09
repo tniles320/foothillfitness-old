@@ -10,17 +10,17 @@ const FeaturedElement = (props) => {
   const { content } = props;
   return (
     <li className="glide__slide featured">
-      <img
-        className="featuredImage"
-        src={`http://localhost:3001/public/uploads/${content.image}`}
-        alt="featured post"
-      />
-      <div className="featuredTextContainer">
-        <Link to={content.link} className="featuredLink">
+      <Link to={content.link} className="featuredLink">
+        <img
+          className="featuredImage"
+          src={`http://localhost:3001/public/uploads/${content.image}`}
+          alt="featured post"
+        />
+        <div className="featuredTextContainer">
           <div className="featuredHeadline">{content.headline}</div>
           <div className="featuredDescription">{content.description}</div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </li>
   );
 };
@@ -53,7 +53,6 @@ function FeaturedCarousel() {
       glideMount();
     });
   }, []);
-  console.log(featuredContent);
 
   return (
     <div className="glide">

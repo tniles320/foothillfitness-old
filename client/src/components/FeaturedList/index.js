@@ -7,17 +7,17 @@ const EditFeaturedList = (props) => {
   const { content } = props;
   return (
     <div className="editFeatured">
-      <img
-        src={`http://localhost:3001/public/uploads/${content.image}`}
-        alt="editor"
-        className="editImage"
-      />
-      <div className="editTextContainer">
-        <Link to={content.link} className="editLink">
+      <Link to={content.link} className="editLink">
+        <img
+          src={`http://localhost:3001/public/uploads/${content.image}`}
+          alt="editor"
+          className="editImage"
+        />
+        <div className="editTextContainer">
           <div className="editHeadline">{content.headline}</div>
           <div className="editDescription">{content.description}</div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 };
