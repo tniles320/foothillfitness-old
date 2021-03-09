@@ -1,35 +1,41 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import Glide from "@glidejs/glide";
 import "./glide.core.min.css";
 import "./glide.theme.min.css";
-
-const uploadTest = [
-  "7D964516-D79F-463E-A375-4A33D45F58B6.jpeg",
-  "69D971A5-97B3-4913-8564-83550BD26D85.jpeg",
-  "1265960E-C777-4304-83A1-C2B23CD5062C.jpeg",
-];
+import "./style.css";
 
 const FeaturedElement = (props) => {
+  const { content } = props;
   return (
-    <li className="glide__slide">
+    <li className="glide__slide featured">
       <img
-        className="postImage"
-        src={`http://localhost:3001/public/uploads/${props.featured}`}
+        className="featuredImage"
+        src={`http://localhost:3001/public/uploads/${content.image}`}
         alt="featured post"
       />
+      <div className="featuredTextContainer">
+        <Link to={content.link} className="featuredLink">
+          <div className="featuredHeadline">{content.headline}</div>
+          <div className="featuredDescription">{content.description}</div>
+        </Link>
+      </div>
     </li>
   );
 };
 
 function FeaturedCarousel() {
-  //   const [featuredPost, setFeaturedPost] = useState([]);
-  const [featuredImages, setFeaturedImages] = useState([]);
+  const [featuredContent, setFeaturedContent] = useState([]);
 
-  const handleFeaturedImages = () => {
-    uploadTest.map(async (image) => {
-      const res = await API.getUpload(image);
-      setFeaturedImages((featuredImages) => [...featuredImages, res]);
+  const handleFeaturedContent = async () => {
+    await API.getFeatured().then((res) => {
+      res.data.map((content) => {
+        return setFeaturedContent((featuredContent) => [
+          ...featuredContent,
+          content,
+        ]);
+      });
     });
   };
 
@@ -43,16 +49,18 @@ function FeaturedCarousel() {
   };
 
   useEffect(() => {
-    handleFeaturedImages();
-    glideMount();
+    handleFeaturedContent().then(() => {
+      glideMount();
+    });
   }, []);
+  console.log(featuredContent);
 
   return (
     <div className="glide">
       <div className="glide__track" data-glide-el="track">
         <ul className="glide__slides">
-          {uploadTest.map((featured, index) => {
-            return <FeaturedElement featured={featured} key={index} />;
+          {featuredContent.map((content, index) => {
+            return <FeaturedElement content={content} key={index} />;
           })}
         </ul>
       </div>

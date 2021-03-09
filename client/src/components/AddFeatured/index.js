@@ -12,7 +12,7 @@ function AddFeatured(props) {
       <div id="uploadImage">
         <form id="uploadForm" onSubmit={handleUpload}>
           <input
-            id="imageInput"
+            id="addImage"
             type="file"
             name="myImage"
             accept="image/*"
@@ -24,7 +24,7 @@ function AddFeatured(props) {
       <div id="featuredContent">
         <form id="featuredForm" onSubmit={handleFeaturedSubmit}>
           <input
-            id="healineInput"
+            id="addHealine"
             type="text"
             placeholder="Headline"
             onChange={(e) =>
@@ -32,11 +32,19 @@ function AddFeatured(props) {
             }
           ></input>
           <input
-            id="description"
+            id="addDescription"
             type="text"
             placeholder="Additional info"
             onChange={(e) =>
               setNewFeatured({ ...newFeatured, description: e.target.value })
+            }
+          ></input>
+          <input
+            id="addLink"
+            type="text"
+            placeholder="Add a link or leave blank"
+            onChange={(e) =>
+              setNewFeatured({ ...newFeatured, link: e.target.value })
             }
           ></input>
           <button id="addFeaturedButton" onClick={handleFeaturedSubmit}>
