@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
+import Cardio from "./pages/Cardio";
+import Strength from "./pages/Strength";
+import Brands from "./pages/Brands";
 import Services from "./pages/Services";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NoMatch from "./pages/NoMatch";
 import AdminFeatured from "./pages/AdminFeatured";
 
@@ -14,6 +19,21 @@ function App() {
           </Route>
           <Route exact path="/services">
             <Services />
+          </Route>
+          <Route exact path="/brands">
+            <Brands />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/cardio">
+            <Cardio />
+          </Route>
+          <Route exact path="/strength">
+            <Strength />
           </Route>
           <Route>
             <NoMatch />
