@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import logo from "../../images/foothill-fitness-logo.jpg";
-import "./style.css";
 
 function SideNav(props) {
   const { links, onCloseClick, open, equipList } = props;

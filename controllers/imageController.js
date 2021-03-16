@@ -2,6 +2,14 @@ const { Image } = require("../models");
 
 // methods for the booksController
 module.exports = {
+  findAll: function (req, res) {
+    Image.find({})
+      .then((dbImage) => res.json(dbImage))
+      .catch((err) => {
+        console.error(err);
+        res.status(422).json(err);
+      });
+  },
   findById: function (req, res) {
     Image.findById(req.params.id)
       .then((dbImage) => res.json(dbImage))

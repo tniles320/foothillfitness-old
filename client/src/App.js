@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NoMatch from "./pages/NoMatch";
 import AdminFeatured from "./pages/AdminFeatured";
+import AdminAddProduct from "./pages/AdminAddProduct";
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route exact path="/admin/featured">
             <AdminFeatured />
+          </Route>
+          <Route exact path="/admin/add-product">
+            <AdminAddProduct />
           </Route>
           <Route>
             <NoMatch />

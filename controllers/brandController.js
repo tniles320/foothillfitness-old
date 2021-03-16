@@ -2,6 +2,14 @@ const { Brand } = require("../models");
 
 // methods for the booksController
 module.exports = {
+  findAll: function (req, res) {
+    Brand.find({})
+      .then((dbBrand) => res.json(dbBrand))
+      .catch((err) => {
+        console.error(err);
+        res.status(422).json(err);
+      });
+  },
   findById: function (req, res) {
     Brand.findById(req.params.id)
       .then((dbBrand) => res.json(dbBrand))

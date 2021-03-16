@@ -3,8 +3,8 @@ import axios from "axios";
 
 export default {
   // Strength calls
-  getStrength: function (id) {
-    return axios.get(`/api/strength/${id}`);
+  getStrength: function () {
+    return axios.get(`/api/strength`);
   },
   addStrength: function (strengthData) {
     return axios.post(`/api/strength`, strengthData);
@@ -17,8 +17,8 @@ export default {
   },
 
   // Cardio calls
-  getCardio: function (id) {
-    return axios.get(`/api/cardio/${id}`);
+  getCardio: function () {
+    return axios.get(`/api/cardio/`);
   },
   addCardio: function (cardioData) {
     return axios.post(`/api/cardio`, cardioData);
@@ -31,8 +31,8 @@ export default {
   },
 
   // Brand calls
-  getBrand: function (id) {
-    return axios.get(`/api/brand/${id}`);
+  getBrand: function () {
+    return axios.get(`/api/brand/`);
   },
   addBrand: function (brandData) {
     return axios.post(`/api/brand`, brandData);

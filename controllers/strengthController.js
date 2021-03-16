@@ -2,6 +2,14 @@ const { Strength } = require("../models");
 
 // methods for the booksController
 module.exports = {
+  findAll: function (req, res) {
+    Strength.find({})
+      .then((dbStrength) => res.json(dbStrength))
+      .catch((err) => {
+        console.error(err);
+        res.status(422).json(err);
+      });
+  },
   findById: function (req, res) {
     Strength.findById(req.params.id)
       .then((dbStrength) => res.json(dbStrength))

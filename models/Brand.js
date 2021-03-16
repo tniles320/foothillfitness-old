@@ -7,12 +7,11 @@ const brandSchema = new Schema({
     trim: true,
     required: "Name is required",
   },
-  images: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Image",
-    },
-  ],
+  image: {
+    type: String,
+    trim: true,
+    required: "Image is required",
+  },
   link: {
     type: String,
     trim: true,

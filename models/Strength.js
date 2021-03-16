@@ -16,12 +16,11 @@ const strengthSchema = new Schema({
     type: String,
     trim: true,
   },
-  images: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Image",
-    },
-  ],
+  image: {
+    type: String,
+    trim: true,
+    required: "Image is required",
+  },
   desciption: {
     type: String,
     trim: true,
