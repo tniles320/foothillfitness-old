@@ -6,6 +6,9 @@ export default {
   getStrength: function () {
     return axios.get(`/api/strength`);
   },
+  getOneStrength: function (id) {
+    return axios.get(`/api/strength/${id}`);
+  },
   addStrength: function (strengthData) {
     return axios.post(`/api/strength`, strengthData);
   },
@@ -19,6 +22,9 @@ export default {
   // Cardio calls
   getCardio: function () {
     return axios.get(`/api/cardio/`);
+  },
+  getOneCardio: function (id) {
+    return axios.get(`/api/cardio/${id}`);
   },
   addCardio: function (cardioData) {
     return axios.post(`/api/cardio`, cardioData);

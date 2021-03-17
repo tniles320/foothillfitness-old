@@ -6,6 +6,8 @@ import Brands from "./pages/Brands";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CardioProduct from "./pages/CardioProduct";
+import StrengthProduct from "./pages/StrengthProduct";
 import NoMatch from "./pages/NoMatch";
 import AdminFeatured from "./pages/AdminFeatured";
 import AdminAddProduct from "./pages/AdminAddProduct";
@@ -35,6 +37,12 @@ function App() {
           </Route>
           <Route exact path="/strength">
             <Strength />
+          </Route>
+          <Route exact path="/cardio/:id">
+            <CardioProduct />
+          </Route>
+          <Route exact path="/strength/:id">
+            <StrengthProduct />
           </Route>
           <Route>
             <NoMatch />

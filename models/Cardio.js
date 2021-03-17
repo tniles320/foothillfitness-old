@@ -21,7 +21,7 @@ const cardioSchema = new Schema({
     trim: true,
     required: "Image is required",
   },
-  desciption: {
+  description: {
     type: String,
     trim: true,
   },

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Nav from "../../components/Nav";
 import SideBar from "../../components/SideBar";
 import API from "../../utils/API";
-import ProductCard from "../../components/ProductCard";
+import ViewableList from "../../components/ViewableList";
 
 const subCategoryList = [
   "Barbells",
@@ -48,7 +48,7 @@ function Strength() {
         categories={subCategoryList}
         handleCategorySelect={handleCategorySelect}
       />
-      <ProductCard />
+      <ViewableList productList={productList} categorySelect={categorySelect} />
     </div>
   );
 }

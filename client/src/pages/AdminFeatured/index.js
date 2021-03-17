@@ -17,7 +17,6 @@ function AdminFeatured() {
     const formData = new FormData();
     formData.append("file", file);
     await API.addUpload(formData).then((res) => {
-      console.log(res.data);
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
@@ -27,13 +26,11 @@ function AdminFeatured() {
     });
   };
   const handleFilechange = (e) => {
-    console.log(e.target.files[0]);
     setFile(e.target.files[0]);
   };
 
   const handleFeaturedSubmit = (e) => {
     e.preventDefault();
-    console.log(newFeatured);
     API.addFeatured(newFeatured).then((res) => {
       if (res.status === 422) {
         console.log(res);

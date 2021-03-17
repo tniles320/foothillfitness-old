@@ -20,7 +20,6 @@ function AdminAddProduct() {
     const formData = new FormData();
     formData.append("file", file);
     await API.addUpload(formData).then((res) => {
-      console.log(res.data);
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
@@ -30,13 +29,11 @@ function AdminAddProduct() {
     });
   };
   const handleFilechange = (e) => {
-    console.log(e.target.files[0]);
     setFile(e.target.files[0]);
   };
 
   const handleProductSubmit = (e) => {
     e.preventDefault();
-    console.log(newProduct);
     if (newProduct.category === "strength") {
       API.addStrength(newProduct).then((res) => {
         if (res.status === 422) {
