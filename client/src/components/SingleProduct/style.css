@@ -1,0 +1,22 @@
+.singleProductContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.singleImage {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.singleTextContainer {
+    max-width: 500px;
+}
+
+.singleQuantity {
+    color: rgb(224, 15, 15);
+    font-weight: bold;
+}
+
+.singleDescription {
+    padding-top: 40px;
+}

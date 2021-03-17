@@ -8,17 +8,13 @@ function CardioProduct() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
 
-  const handleProduct = () => {
+  useEffect(() => {
     API.getOneCardio(id)
       .then((res) => {
         setProduct(res.data);
       })
       .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    handleProduct();
-  }, []);
+  }, [id]);
 
   return (
     <div>
