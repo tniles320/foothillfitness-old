@@ -12,7 +12,7 @@ export default {
   addStrength: function (strengthData) {
     return axios.post(`/api/strength`, strengthData);
   },
-  updateStrength: function (strengthData, id) {
+  updateStrength: function (id, strengthData) {
     return axios.put(`/api/strength/${id}`, strengthData);
   },
   deleteStrength: function (id) {
@@ -29,7 +29,7 @@ export default {
   addCardio: function (cardioData) {
     return axios.post(`/api/cardio`, cardioData);
   },
-  updateCardio: function (cardioData, id) {
+  updateCardio: function (id, cardioData) {
     return axios.put(`/api/cardio/${id}`, cardioData);
   },
   deleteCardio: function (id) {
@@ -43,7 +43,7 @@ export default {
   addBrand: function (brandData) {
     return axios.post(`/api/brand`, brandData);
   },
-  updateBrand: function (brandData, id) {
+  updateBrand: function (id, brandData) {
     return axios.put(`/api/brand/${id}`, brandData);
   },
   deleteBrand: function (id) {
@@ -57,7 +57,7 @@ export default {
   addImage: function (imageData) {
     return axios.post(`/api/image`, imageData);
   },
-  updateImage: function (imageData, id) {
+  updateImage: function (id, imageData) {
     return axios.put(`/api/image/${id}`, imageData);
   },
   deleteImage: function (id) {
@@ -74,7 +74,7 @@ export default {
   addFeatured: function (featuredData) {
     return axios.post(`/api/featured`, featuredData);
   },
-  updateFeatured: function (featuredData, id) {
+  updateFeatured: function (id, featuredData) {
     return axios.put(`/api/featured/${id}`, featuredData);
   },
   deleteFeatured: function (id) {

@@ -35,16 +35,10 @@ function ProductCard(props) {
   if (loggedIn) {
     return (
       <div className="productCard">
-        <Link className="editProduct" to={productLink}>
-          &#9998;
-        </Link>
         <button className="deleteProduct" onClick={handleDeleteButton}>
           &#10006;
         </button>
-        <Link
-          to={`/${product.category}/${product._id}`}
-          className="productLink"
-        >
+        <Link to={productLink} className="productLink">
           <img
             src={`http://localhost:3001/public/uploads/${product.image}`}
             alt="editor"

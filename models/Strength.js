@@ -41,6 +41,10 @@ const strengthSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  salePrice: {
+    type: String,
+    trim: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now(),

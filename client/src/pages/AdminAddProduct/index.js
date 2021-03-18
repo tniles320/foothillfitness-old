@@ -13,6 +13,8 @@ function AdminAddProduct() {
     brand: "",
     price: "",
     quantity: "",
+    sale: false,
+    salePrice: "",
   });
 
   const handleUpload = async (e) => {
