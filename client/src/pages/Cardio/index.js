@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Nav from "../../components/Nav";
 import SideBar from "../../components/SideBar";
 import API from "../../utils/API";
 import ViewableList from "../../components/ViewableList";
+import AdminContext from "../../utils/AdminContext";
+import AdminNav from "../../components/AdminNav";
 
 const subCategoryList = [
   "Treadmills",
@@ -13,7 +15,8 @@ const subCategoryList = [
   "Accessories",
 ];
 
-function Cardio() {
+function Cardio(props) {
+  const { loggedIn } = useContext(AdminContext);
   const [productList, setProductList] = useState([]);
   const [categorySelect, setCategorySelect] = useState({
     category: "",
@@ -39,7 +42,7 @@ function Cardio() {
 
   return (
     <div>
-      <Nav />
+      {loggedIn ? <AdminNav handleLogout={props.handleLogout} /> : <Nav />}
       <SideBar
         categories={subCategoryList}
         handleCategorySelect={handleCategorySelect}

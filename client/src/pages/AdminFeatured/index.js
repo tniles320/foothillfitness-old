@@ -2,8 +2,9 @@ import { useState } from "react";
 import API from "../../utils/API";
 import AddFeatured from "../../components/AddFeatured";
 import FeaturedList from "../../components/FeaturedList";
+import AdminNav from "../../components/AdminNav";
 
-function AdminFeatured() {
+function AdminFeatured(props) {
   const [file, setFile] = useState();
   const [newFeatured, setNewFeatured] = useState({
     headline: "",
@@ -43,6 +44,7 @@ function AdminFeatured() {
 
   return (
     <div>
+      <AdminNav handleLogout={props.handleLogout} />
       <AddFeatured
         handleUpload={handleUpload}
         handleFilechange={handleFilechange}

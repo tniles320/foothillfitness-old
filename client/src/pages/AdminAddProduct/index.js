@@ -1,8 +1,9 @@
 import { useState } from "react";
 import API from "../../utils/API";
 import AddProduct from "../../components/AddProduct";
+import AdminNav from "../../components/AdminNav";
 
-function AdminAddProduct() {
+function AdminAddProduct(props) {
   const [file, setFile] = useState();
   const [newProduct, setNewProduct] = useState({
     name: "",
@@ -62,6 +63,7 @@ function AdminAddProduct() {
 
   return (
     <div>
+      <AdminNav handleLogout={props.handleLogout} />
       <AddProduct
         handleUpload={handleUpload}
         handleFilechange={handleFilechange}

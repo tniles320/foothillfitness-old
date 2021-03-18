@@ -16,6 +16,7 @@ module.exports = {
       .then(async function (dbUser) {
         if (!dbUser) {
           res.send({ user: false, message: "No user with that email" });
+          console.log("No user with that email");
           return;
         }
         if (await bcrypt.compare(req.body.password, dbUser.password)) {
@@ -40,7 +41,8 @@ module.exports = {
       });
   },
   logout: function (req, res) {
-    res.clearCookie("cookiename").send(200);
+    console.log(req.headers);
+    res.clearCookie("cookiename").sendStatus(200);
 
     const cookies = req.headers.cookie.split(";");
     let cookievalue = null;

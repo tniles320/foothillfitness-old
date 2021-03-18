@@ -6,13 +6,20 @@ export default {
   getUser: function (id) {
     return axios.get(`/admin/user/${id}`);
   },
+  getUserSession: function (id) {
+    return axios.get(`/admin/user-session/${id}`);
+  },
   // Logs the user out
   logout: function (id) {
-    return axios.post(`/admin/logout/${id}`);
+    return axios.post(`/admin/user/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   },
   // Log the user in
   login: function (email, password) {
-    return axios.post(`/admin/login/`, { email, password });
+    return axios.post(`/admin/user/`, { email, password });
   },
   // New user registration
   register: function (userData) {

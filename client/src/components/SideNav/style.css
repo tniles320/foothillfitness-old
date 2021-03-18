@@ -1,0 +1,15 @@
+.sideNavLogo {
+    display: none;
+}
+
+.sideNavLogout:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+
+    .sideNavLogo {
+        display: block;
+    }
+    
+  }
