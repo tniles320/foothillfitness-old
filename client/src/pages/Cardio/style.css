@@ -1,0 +1,9 @@
+/* .productPageContainer {
+    background: rgb(175, 25, 25, 0.1);
+    min-height: 900px;
+} */
+
+body {
+    background: rgb(175, 25, 25, 0.1);
+    margin: 0;
+}

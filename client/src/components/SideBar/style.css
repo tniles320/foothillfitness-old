@@ -4,7 +4,9 @@
     position: absolute; /* Stay in place */
     z-index: 1; /* Stay on top */
     left: 0;
-    background-color: rgb(223, 180, 41);
+    /* background-color: rgb(175, 25, 25); */
+    background-image: linear-gradient(to right, rgb(175, 25, 25), rgba(175, 25, 25, 0.9), rgba(175, 25, 25, 0.7), rgba(175, 25, 25, 0.4), rgba(175, 25, 25, 0));
+    /* background-image: linear-gradient(to bottom, rgb(175, 25, 25), rgba(175, 25, 25, 0.9), rgba(175, 25, 25, 0.7), rgba(175, 25, 25, 0.4), rgba(175, 25, 25, 0.1)); */
     overflow-y: hidden; /* Disable horizontal scroll */
     padding-top: 20px; /* Place content 60px from the top */
     transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
@@ -12,10 +14,11 @@
   
   /* The navigation menu links */
   #sidebar div {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 40px;
     text-decoration: none;
     font-size: 1.5rem;
     color: rgb(27, 27, 27);
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255));
     display: block;
     transition: 0.6s;
   }

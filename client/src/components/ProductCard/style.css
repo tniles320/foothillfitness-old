@@ -6,11 +6,49 @@
 }
 
 .productCard {
-    height: 300px;
-    width: 300px;
+    height: 332px;
+    width: 250px;
+    margin: 0 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.productCard:hover {
+    transform: scale(1.1);
 }
 
 .productImage {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.productLink {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.productTextContainer {
+    text-align: center;
+}
+
+.productBrand {
+    margin-top: 5px;
+}
+
+.productName {
+    margin-top: 5px;
+}
+
+.saleBanner {
+    color: white;
+    background-image: linear-gradient(to right, rgba(175, 25, 25, 0.0), rgba(175, 25, 25), rgba(175, 25, 25, 0.0));
+    font-size: 1rem;
+    margin-top: 5px;
 }

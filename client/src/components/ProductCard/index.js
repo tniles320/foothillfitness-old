@@ -32,6 +32,14 @@ function ProductCard(props) {
     }
   };
 
+  const SaleBanner = () => {
+    if (product.sale) {
+      return <div className="saleBanner">On Sale!</div>;
+    } else {
+      return null;
+    }
+  };
+
   if (loggedIn) {
     return (
       <div className="productCard">
@@ -46,6 +54,7 @@ function ProductCard(props) {
           />
           <div className="productTextContainer">
             <div className="productName">{product.name}</div>
+            <SaleBanner />
           </div>
         </Link>
       </div>
@@ -63,7 +72,9 @@ function ProductCard(props) {
             className="productImage"
           />
           <div className="productTextContainer">
+            <div className="productBrand">{product.brand}</div>
             <div className="productName">{product.name}</div>
+            <SaleBanner />
           </div>
         </Link>
       </div>

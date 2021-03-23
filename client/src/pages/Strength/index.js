@@ -35,7 +35,7 @@ function Strength(props) {
   const handleProductList = async () => {
     await API.getStrength().then((res) => {
       res.data.map((content) => {
-        return setProductList((productList) => [...productList, content]);
+        return setProductList((productList) => [content, ...productList]);
       });
     });
   };
@@ -45,7 +45,7 @@ function Strength(props) {
   }, []);
 
   return (
-    <div>
+    <div className="productPageContainer">
       {loggedIn ? <AdminNav handleLogout={props.handleLogout} /> : <Nav />}
       <SideBar
         categories={subCategoryList}

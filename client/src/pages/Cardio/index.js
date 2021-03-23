@@ -5,6 +5,7 @@ import API from "../../utils/API";
 import ViewableList from "../../components/ViewableList";
 import AdminContext from "../../utils/AdminContext";
 import AdminNav from "../../components/AdminNav";
+import "./style.css";
 
 const subCategoryList = [
   "Treadmills",
@@ -31,7 +32,7 @@ function Cardio(props) {
   const handleProductList = async () => {
     await API.getCardio().then((res) => {
       res.data.map((content) => {
-        return setProductList((productList) => [...productList, content]);
+        return setProductList((productList) => [content, ...productList]);
       });
     });
   };
@@ -41,7 +42,7 @@ function Cardio(props) {
   }, []);
 
   return (
-    <div>
+    <div className="productPageContainer">
       {loggedIn ? <AdminNav handleLogout={props.handleLogout} /> : <Nav />}
       <SideBar
         categories={subCategoryList}

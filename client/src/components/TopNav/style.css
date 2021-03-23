@@ -1,3 +1,12 @@
+#topNav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    height: 92px;
+    padding: 10px 40px 10px 10px;
+    margin-bottom: 10px;
+}
+
 .logout:hover {
     cursor: pointer;
 }
@@ -14,9 +23,23 @@
 .topNavLink {
     text-decoration: none;
     color: black;
+    text-align: center;
+    box-shadow: 10px 10px 15px 0px rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 20px;
+    background-color: rgb(243, 243, 243);
 }
 
 .topNavLink:hover {
-    color: rgb(241, 241, 241);
+    color: rgb(230, 36, 36);
     transition: 0.6s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+
+    #topNav {
+        display: none;
+    }
+    
 }

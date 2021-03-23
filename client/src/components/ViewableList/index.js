@@ -21,7 +21,11 @@ function ViewableList(props) {
   return (
     <div className="productContainer">
       {viewableList.map((product, index) => {
-        return <ProductCard product={product} key={index} />;
+        if (index >= 20) {
+          return null;
+        } else {
+          return <ProductCard product={product} key={index} />;
+        }
       })}
     </div>
   );

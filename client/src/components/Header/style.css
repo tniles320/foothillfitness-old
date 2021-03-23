@@ -1,3 +1,12 @@
-#siteLogo {
-    text-align: center;
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-image: url("../../images/Over-Project.png");
+    background-position: center;
+    height: 200px;
+    margin-top: -10px;
+    margin-bottom: -16px;
 }

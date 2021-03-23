@@ -14,7 +14,7 @@ function Dropdown(props) {
 
   return (
     <div className="dropdown">
-      <button className="dropbtn topNavLink">{title}</button>
+      <button className="dropbtn">{title}</button>
       <div className="dropdown-content">{dropdownLinks}</div>
     </div>
   );
