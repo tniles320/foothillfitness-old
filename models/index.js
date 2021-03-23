@@ -5,5 +5,4 @@ module.exports = {
   Brand: require("./Brand"),
   Image: require("./Image"),
   Featured: require("./Featured"),
-  UserSession: require("./UserSession"),
 };

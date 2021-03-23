@@ -1,11 +1,12 @@
 import { useState } from "react";
 import TopNav from "../TopNav";
 import SideNav from "../SideNav";
+import ADMIN from "../../utils/ADMIN";
 
 // sideNav Contents
 const Contents = (props) => <div>{props.children}</div>;
 
-function AdminNav(props) {
+function AdminNav() {
   const [navState, setNavState] = useState({ sideNavOpen: false });
 
   const links = [
@@ -42,19 +43,24 @@ function AdminNav(props) {
     setNavState({ sideNavOpen: false });
   };
 
+  const handleLogout = async () => {
+    await ADMIN.logout().then((res) => {
+      console.log("successfully logged out!");
+      if (res.status === 200) {
+        window.location.reload();
+      }
+    });
+  };
+
   return (
     <div>
-      <TopNav
-        links={links}
-        equipList={equipList}
-        handleLogout={props.handleLogout}
-      />
+      <TopNav links={links} equipList={equipList} handleLogout={handleLogout} />
       <SideNav
         open={navState.sideNavOpen}
         onCloseClick={handleSideNavClose}
         links={links}
         equipList={equipList}
-        handleLogout={props.handleLogout}
+        handleLogout={handleLogout}
       />
       <Contents open={navState.sideNavOpen}>
         <button id="open-nav" onClick={handleSideNavOpen}>

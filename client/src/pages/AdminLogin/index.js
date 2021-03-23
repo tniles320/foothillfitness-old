@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
+import ADMIN from "../../utils/ADMIN";
 
 function AdminLogin(props) {
-  const { handleAdminLogin, handleLogout } = props;
+  const { handleAdminLogin } = props;
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
-  // const userData = { email: "tniles320@gmail.com", password: "password" };
+  // const userData = { username: "tniles320@gmail.com", password: "password" };
   // const register = () => {
   //   console.log(userData);
   //   ADMIN.register(userData).then((res) => {
@@ -19,39 +19,31 @@ function AdminLogin(props) {
   // useEffect(() => {
   //   register();
   // }, []);
-  const LogoutButton = () => {
-    return (
-      <Link to="/admin/login" className="logout" onClick={handleLogout}>
-        Logout
-      </Link>
-    );
-  };
 
   return (
     <div className="loginContainer">
       <form
         className="loginForm"
-        onSubmit={(e) => handleAdminLogin(user.email, user.password, e)}
+        onSubmit={(e) => handleAdminLogin(user.username, user.password, e)}
       >
         <input
           type="email"
           placeholder="Email"
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
+          onChange={(e) => setUser({ ...user, username: e.target.value })}
         ></input>
         <input
           type="password"
           placeholder="Password"
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         ></input>
-        <Link
+        <button
           to="/admin"
           className="loginButton"
-          onClick={(e) => handleAdminLogin(user.email, user.password, e)}
+          onClick={(e) => handleAdminLogin(user.username, user.password, e)}
         >
           Login
-        </Link>
+        </button>
       </form>
-      <LogoutButton />
     </div>
   );
 }

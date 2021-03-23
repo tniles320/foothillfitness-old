@@ -11,7 +11,7 @@ const subCategoryList = [
   "Bikes",
   "Stair Climbers",
   "Rowing Machines",
-  "Eliptcals",
+  "Ellipticals",
   "Accessories",
 ];
 

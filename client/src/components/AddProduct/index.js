@@ -18,7 +18,7 @@ const cardioCategory = [
   "Bikes",
   "Stair Climbers",
   "Rowing Machines",
-  "Eliptcals",
+  "Ellipticals",
   "Accessories",
 ];
 

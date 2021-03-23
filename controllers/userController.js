@@ -1,8 +1,19 @@
-const { User, UserSession } = require("../models");
+const { User } = require("../models");
 const bcrypt = require("bcrypt");
+const passport = require("passport");
 
 // methods for the userController
 module.exports = {
+  getUser: function (req, res) {
+    if (req.user) {
+      User.findOne({ username: req.user.username }).then((dbUser) => {
+        res.send({
+          id: dbUser._id,
+          username: dbUser.username,
+        }); // The req.user stores the entire user that has been authenticated inside of it.
+      });
+    }
+  },
   findById: function (req, res) {
     User.findById(req.params.id)
       .then((dbUser) => res.json(dbUser))
@@ -11,69 +22,37 @@ module.exports = {
         res.status(422).json(err);
       });
   },
-  login: function (req, res) {
-    User.findOne({ email: req.body.email })
-      .then(async function (dbUser) {
-        if (!dbUser) {
-          res.send({ user: false, message: "No user with that email" });
-          console.log("No user with that email");
-          return;
-        }
-        if (await bcrypt.compare(req.body.password, dbUser.password)) {
-          let cookievalue = await bcrypt.hash("secretword", 10);
-          res
-            .cookie("cookiename", cookievalue)
-            .send({ user: dbUser._id, message: "Successfully logged in!" });
-          UserSession.create({
-            userId: dbUser._id,
-            session: cookievalue,
-          }).then((res) => {
-            console.log("Cookie created");
-          });
-        } else {
-          res.send({ user: false, message: "Email or Password is incorrect" });
-        }
-      })
-      .catch((err) => {
-        res.send(err);
-        console.log(err);
-        console.log("unexpected error");
-      });
+  login: function (req, res, next) {
+    passport.authenticate("local", (err, user, info) => {
+      if (err) throw err;
+      if (!user) res.send("No User Exists");
+      else {
+        req.logIn(user, (err) => {
+          if (err) throw err;
+          res.send("Successfully Authenticated");
+        });
+      }
+    })(req, res, next);
   },
   logout: function (req, res) {
-    console.log(req.headers);
-    res.clearCookie("cookiename").sendStatus(200);
-
-    const cookies = req.headers.cookie.split(";");
-    let cookievalue = null;
-    cookies.forEach((element) => {
-      if (element.split("=")[0].trim() === "cookiename") {
-        cookievalue = decodeURIComponent(element.split("=")[1].trim());
-      }
-    });
-
-    UserSession.deleteOne({
-      session: cookievalue,
-    })
-      .then((res) => {
-        console.log("Cookie has been cleared");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    req.logout();
+    res.sendStatus(200);
   },
   register: async function (req, res) {
-    try {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
-      User.create({
-        ...req.body,
-        password: hashedPassword,
-      }).then((dbUser) => {
-        res.send({ user: dbUser._id, message: "Account created!" });
-      });
-    } catch (err) {
-      res.send(err);
-    }
+    User.findOne({ username: req.body.username }, async (err, doc) => {
+      if (err) throw err;
+      if (doc) res.send("User Already Exists");
+      if (!doc) {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+        const newUser = new User({
+          username: req.body.username,
+          password: hashedPassword,
+        });
+        await newUser.save();
+        res.send("User Created");
+      }
+    });
   },
   update: function (req, res) {
     User.findOneAndUpdate({ _id: req.params.id }, req.body)

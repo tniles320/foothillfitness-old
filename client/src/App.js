@@ -17,49 +17,28 @@ import ADMIN from "./utils/ADMIN";
 import AdminContext from "./utils/AdminContext";
 
 function App() {
-  // look into setting res.data[0].session to state and using getUserSession to compare the two
-  const [adminId, setAdminId] = useState({
+  const [user, setUser] = useState({
     id: "",
-  });
-  const [adminLogin, setAdminLogin] = useState({
-    loggedIn: true,
+    loggedIn: false,
   });
 
   const handleAdminLogin = (username, password, e) => {
     e.preventDefault();
     ADMIN.login(username, password).then((res) => {
-      console.log(res.data);
-      if (res.data.user) {
-        setAdminId({
-          id: res.data.user,
-        });
-      }
-      alert(res.data.message);
-    });
-  };
-
-  const handleLogout = async () => {
-    await ADMIN.logout(adminLogin.id).then((res) => {
-      console.log("successfully logged out!");
-      if (res.status === 200) {
-        setAdminId({
-          id: "",
-        });
-      }
-      alert(res.data.message);
+      window.location.reload();
     });
   };
 
   useEffect(() => {
-    ADMIN.getUserSession(adminId.id).then((res) => {
-      console.log(res.data);
-      if (res.data[0].userId === adminId.id) {
-        setAdminLogin({
+    ADMIN.getUser().then((res) => {
+      if (res) {
+        setUser({
+          id: res.data.id,
           loggedIn: true,
         });
       }
     });
-  }, [adminId]);
+  }, []);
 
   return (
     <div>
@@ -97,47 +76,38 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <AdminContext.Provider value={adminLogin}>
+      <AdminContext.Provider value={user}>
         <Router>
-          {adminLogin.loggedIn ? (
+          {user.loggedIn ? (
             <Switch>
               <Route exact path="/admin">
-                <Home handleLogout={handleLogout} />
+                <Home />
               </Route>
               <Route exact path="/admin/featured">
-                <AdminFeatured handleLogout={handleLogout} />
+                <AdminFeatured />
               </Route>
               <Route exact path="/admin/add-product">
-                <AdminAddProduct handleLogout={handleLogout} />
+                <AdminAddProduct />
               </Route>
               <Route exact path="/admin/cardio">
-                <Cardio handleLogout={handleLogout} />
+                <Cardio />
               </Route>
               <Route exact path="/admin/strength">
-                <Strength handleLogout={handleLogout} />
+                <Strength />
               </Route>
               <Route exact path="/admin/cardio/:id">
-                <CardioProduct handleLogout={handleLogout} />
+                <CardioProduct />
               </Route>
               <Route exact path="/admin/strength/:id">
-                <StrengthProduct handleLogout={handleLogout} />
-              </Route>
-              <Route exact path="/admin/login">
-                <AdminLogin
-                  handleAdminLogin={handleAdminLogin}
-                  handleLogout={handleLogout}
-                />
+                <StrengthProduct />
               </Route>
               <Route>
                 <NoMatch />
               </Route>
             </Switch>
           ) : (
-            // <Route exact path="/admin/login">
-            //   <AdminLogin handleAdminLogin={handleAdminLogin} />
-            // </Route>
-            <Route>
-              <NoMatch />
+            <Route exact path="/admin">
+              <AdminLogin handleAdminLogin={handleAdminLogin} />
             </Route>
           )}
         </Router>

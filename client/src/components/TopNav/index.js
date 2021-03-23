@@ -21,9 +21,9 @@ function TopNav(props) {
   const LogoutButton = () => {
     if (loggedIn) {
       return (
-        <Link to="/admin/login" className="logout" onClick={handleLogout}>
+        <button className="logout" onClick={() => handleLogout()}>
           Logout
-        </Link>
+        </button>
       );
     } else {
       return null;
@@ -35,9 +35,11 @@ function TopNav(props) {
       <Link to={loggedIn ? "/admin" : "/"}>
         <img src={logo} className="logo" alt="logo"></img>
       </Link>
-      <Dropdown title="Equipment" list={equipList} />
-      {navLinks}
-      <LogoutButton />
+      <div className="navLinkContainer">
+        <Dropdown title="Equipment" list={equipList} />
+        {navLinks}
+        <LogoutButton />
+      </div>
     </div>
   );
 }

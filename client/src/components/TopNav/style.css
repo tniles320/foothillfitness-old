@@ -1,3 +1,22 @@
 .logout:hover {
     cursor: pointer;
 }
+
+.navLinkContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.topNavLink {
+    text-decoration: none;
+    color: black;
+}
+
+.topNavLink:hover {
+    color: rgb(241, 241, 241);
+    transition: 0.6s;
+}
