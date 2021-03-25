@@ -1,0 +1,20 @@
+.addProductContainer {
+    display: flex;
+}
+
+#productForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#uploadImage,
+#addName,
+#addCategory,
+#addSubCategory,
+#addDescription,
+#addBrand,
+#addPrice,
+#addQuantity,
+#addFeaturedButton {
+    margin: 10px;
+}

@@ -1,0 +1,21 @@
+.loginContainer {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm input {
+    margin: 10px;
+}
+
+.loginButton {
+    margin: 10px;
+    width: 100px;
+}

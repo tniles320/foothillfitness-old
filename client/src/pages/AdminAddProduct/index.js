@@ -2,6 +2,7 @@ import { useState } from "react";
 import API from "../../utils/API";
 import AddProduct from "../../components/AddProduct";
 import AdminNav from "../../components/AdminNav";
+import ProductPreview from "../../components/ProductPreview";
 
 function AdminAddProduct(props) {
   const [file, setFile] = useState();
@@ -71,6 +72,7 @@ function AdminAddProduct(props) {
         newProduct={newProduct}
         setNewProduct={setNewProduct}
       />
+      <ProductPreview newProduct={newProduct} />
     </div>
   );
 }

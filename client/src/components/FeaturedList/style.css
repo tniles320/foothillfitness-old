@@ -3,6 +3,7 @@
     text-align: center;
     height: 300px;
     width: 300px;
+    margin: 50px;
 }
 
 .editImage {
@@ -29,6 +30,6 @@
 
 .editHeadline,
 .editDescription {
-    color: white;
+    color: rgb(0, 0, 0);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }

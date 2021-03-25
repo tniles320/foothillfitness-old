@@ -22,10 +22,12 @@ function App() {
     loggedIn: false,
   });
 
-  const handleAdminLogin = (username, password, e) => {
+  const handleAdminLogin = async (username, password, e) => {
     e.preventDefault();
-    ADMIN.login(username, password).then((res) => {
-      window.location.reload();
+    await ADMIN.login(username, password).then((res) => {
+      if (res.status === 200) {
+        window.location.reload();
+      }
     });
   };
 

@@ -7,7 +7,13 @@ function ViewableList(props) {
 
   useEffect(() => {
     if (categorySelect.category === "") {
-      setViewableList(productList);
+      const maxList = [];
+      productList.forEach((product) => {
+        if (maxList.length < 30) {
+          maxList.push(product);
+        }
+      });
+      setViewableList(maxList);
     } else {
       setViewableList([]);
       productList.forEach((product) => {

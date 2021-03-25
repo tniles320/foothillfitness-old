@@ -23,10 +23,6 @@ const links = [
     link: "/contact",
     tag: "Contact",
   },
-  {
-    link: "/list",
-    tag: "My List",
-  },
 ];
 
 const equipList = [

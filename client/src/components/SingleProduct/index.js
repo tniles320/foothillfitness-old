@@ -46,7 +46,6 @@ function SingleProduct(props) {
   const [editProduct, setEditProduct] = useState({});
 
   const handleEditProduct = () => {
-    console.log(editProduct);
     if (product.category === "strength") {
       API.updateStrength(product._id, editProduct).then((res) => {
         if (res.status === 422) {
@@ -129,6 +128,7 @@ function SingleProduct(props) {
           className="singleImage"
         />
         <div className="singleTextContainer">
+          <h3 className="singleBrand">{product.brand}</h3>
           <h1 className="singleName">{product.name}</h1>
           <PriceComponent product={product} />
           <LowQuantity quantity={product.quantity} />

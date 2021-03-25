@@ -13,7 +13,7 @@ const subCategoryList = [
   "Machines",
   "Racks",
   "Benches",
-  "All-in-one Gym",
+  "Multi-use Machines",
   "Kettlebells",
   "Cable Machines",
   "Accessories",

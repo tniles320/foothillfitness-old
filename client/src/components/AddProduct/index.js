@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 
 const strengthCategory = [
   "Barbells",
@@ -7,7 +8,7 @@ const strengthCategory = [
   "Machines",
   "Racks",
   "Benches",
-  "All-in-one Gym",
+  "Multi-use Machines",
   "Kettlebells",
   "Cable Machines",
   "Accessories",
@@ -56,8 +57,9 @@ function AddProduct(props) {
   };
 
   return (
-    <div>
+    <div className="addProductContainer">
       <div id="uploadImage">
+        <label htmlFor="uploadForm">Click choose file, then upload photo</label>
         <form id="uploadForm" onSubmit={handleUpload}>
           <input
             id="addImage"

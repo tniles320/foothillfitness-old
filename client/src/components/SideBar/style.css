@@ -6,7 +6,6 @@
     left: 0;
     /* background-color: rgb(175, 25, 25); */
     background-image: linear-gradient(to right, rgb(175, 25, 25), rgba(175, 25, 25, 0.9), rgba(175, 25, 25, 0.7), rgba(175, 25, 25, 0.4), rgba(175, 25, 25, 0));
-    /* background-image: linear-gradient(to bottom, rgb(175, 25, 25), rgba(175, 25, 25, 0.9), rgba(175, 25, 25, 0.7), rgba(175, 25, 25, 0.4), rgba(175, 25, 25, 0.1)); */
     overflow-y: hidden; /* Disable horizontal scroll */
     padding-top: 20px; /* Place content 60px from the top */
     transition: 1s; /* 0.5 second transition effect to slide in the sidenav */

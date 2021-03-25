@@ -4,7 +4,7 @@ import Nav from "../../components/Nav";
 import AdminNav from "../../components/AdminNav";
 import FeaturedCarousel from "../../components/FeaturedCarousel";
 import ServiceComponent from "../../components/ServiceComponent";
-import PopularCategories from "../../components/PopularCategories";
+import ContactComponent from "../../components/ContactComponent";
 import Footer from "../../components/Footer";
 import AdminContext from "../../utils/AdminContext";
 
@@ -13,11 +13,11 @@ function Home(props) {
 
   return (
     <div>
-      {loggedIn ? <AdminNav handleLogout={props.handleLogout} /> : <Nav />}
+      {loggedIn ? <AdminNav /> : <Nav />}
       <Header />
       <FeaturedCarousel />
       <ServiceComponent />
-      <PopularCategories />
+      <ContactComponent />
       <Footer />
     </div>
   );

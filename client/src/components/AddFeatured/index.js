@@ -39,14 +39,6 @@ function AddFeatured(props) {
               setNewFeatured({ ...newFeatured, description: e.target.value })
             }
           ></input>
-          <input
-            id="addLink"
-            type="text"
-            placeholder="Add a link or leave blank"
-            onChange={(e) =>
-              setNewFeatured({ ...newFeatured, link: e.target.value })
-            }
-          ></input>
           <button id="addFeaturedButton" onClick={handleFeaturedSubmit}>
             Add Featured Content
           </button>

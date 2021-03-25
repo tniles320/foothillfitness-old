@@ -1,23 +1,71 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import "./style.css";
 
 const EditFeaturedList = (props) => {
   const { content } = props;
+  const [editFeatured, setEditFeatured] = useState({});
+
+  const handleEditFeatured = () => {
+    console.log(editFeatured);
+    API.updateFeatured(content._id, editFeatured).then((res) => {
+      if (res.status === 422) {
+        console.log(res);
+        alert("Error editing feature");
+      } else {
+        alert("Feature edit successful!");
+        window.location.reload();
+      }
+    });
+  };
+
+  const handleDeleteFeatured = () => {
+    if (window.confirm("Are you sure you want to delete this?") === true) {
+      API.deleteFeatured(content._id).then((res) => {
+        if (res.status === 422) {
+          console.log(res);
+          alert("Error deleting feature");
+        } else {
+          alert("Feature deleted successfully!");
+          window.location.reload();
+        }
+      });
+    } else {
+      return;
+    }
+  };
+
   return (
     <div className="editFeatured">
-      <Link to={content.link} className="editLink">
+      <div className="editLink">
         <img
           src={`http://localhost:3001/public/uploads/${content.image}`}
           alt="editor"
           className="editImage"
         />
         <div className="editTextContainer">
-          <div className="editHeadline">{content.headline}</div>
-          <div className="editDescription">{content.description}</div>
+          <input
+            className="editHeadline"
+            onChange={(e) =>
+              setEditFeatured({ ...editFeatured, headline: e.target.value })
+            }
+            placeholder={content.headline}
+          ></input>
+          <input
+            className="editDescription"
+            onChange={(e) =>
+              setEditFeatured({ ...editFeatured, description: e.target.value })
+            }
+            placeholder={content.description}
+          ></input>
         </div>
-      </Link>
+      </div>
+      <button className="editFeaturedButton" onClick={handleEditFeatured}>
+        Submit Changes
+      </button>
+      <button className="deleteFeaturedButtton" onClick={handleDeleteFeatured}>
+        &#10006;
+      </button>
     </div>
   );
 };

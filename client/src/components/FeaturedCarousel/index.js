@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import Glide from "@glidejs/glide";
 import "./glide.core.min.css";
@@ -10,17 +9,19 @@ const FeaturedElement = (props) => {
   const { content } = props;
   return (
     <li className="glide__slide featured">
-      <Link to={content.link} className="featuredLink">
+      <div className="featuredLink">
         <img
           className="featuredImage"
           src={`http://localhost:3001/public/uploads/${content.image}`}
           alt="featured post"
         />
-        <div className="featuredTextContainer">
-          <div className="featuredHeadline">{content.headline}</div>
-          <div className="featuredDescription">{content.description}</div>
+        <div className="featuredContainer">
+          <div className="featuredTextContainer">
+            <div className="featuredHeadline">{content.headline}</div>
+            <div className="featuredDescription">{content.description}</div>
+          </div>
         </div>
-      </Link>
+      </div>
     </li>
   );
 };

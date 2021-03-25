@@ -1,0 +1,17 @@
+.productPreviewContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagePreview {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.textContainerPreview {
+    max-width: 500px;
+}
+
+.descriptionPreview {
+    padding-top: 40px;
+}

@@ -17,20 +17,24 @@
     align-items: center;
     width: 100%;
     padding: 20px;
-    font-size: 1.5rem;
 }
 
-.topNavLink {
+.topNavLink,
+.logout {
     text-decoration: none;
     color: black;
+    border: none;
     text-align: center;
-    box-shadow: 10px 10px 15px 0px rgb(0, 0, 0);
+    box-shadow: 10px 10px 15px 0px rgb(0, 0, 0, 0.6);
     border-radius: 4px;
     padding: 20px;
-    background-color: rgb(243, 243, 243);
+    font-size: 1.5rem;
+    /* background-color: rgb(243, 243, 243); */
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(243, 243, 243));
 }
 
-.topNavLink:hover {
+.topNavLink:hover,
+.logout:hover {
     color: rgb(230, 36, 36);
     transition: 0.6s;
     transform: scale(1.1);

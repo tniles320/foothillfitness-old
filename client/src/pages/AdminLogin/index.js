@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import ADMIN from "../../utils/ADMIN";
+import "./style.css";
 
 function AdminLogin(props) {
   const { handleAdminLogin } = props;
@@ -37,7 +38,6 @@ function AdminLogin(props) {
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         ></input>
         <button
-          to="/admin"
           className="loginButton"
           onClick={(e) => handleAdminLogin(user.username, user.password, e)}
         >
