@@ -6,13 +6,25 @@
     margin: 40px 20px 40px 0;
 }
 
-.serviceLink {
-    text-decoration: none;
-    text-align: right;
-    color: black;
-    font-size: 3rem;
-    padding-top: 100px;
+.homeServiceText {
+    width: 50%;
+    padding: 20px 0 0 40px;
     background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
+}
+
+.homeHeader {
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0));
+}
+
+.serviceLink {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
 }
 
 .serviceImg {

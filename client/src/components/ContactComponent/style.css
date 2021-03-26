@@ -6,12 +6,24 @@
     margin: 40px 20px 40px 20px;
 }
 
+.homeContactText {
+    width: 50%;
+    padding-top: 20px;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
+}
+
+.streetLocation {
+    font-size: 1.5rem;
+}
+
+.contactPhone {
+    font-size: 1.5rem;
+}
+
 .contactLink {
     text-decoration: none;
     color: black;
-    font-size: 3rem;
-    padding-top: 100px;
-    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
+    font-size: 1.5rem;
 }
 
 /* .serviceImg {

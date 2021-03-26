@@ -1,0 +1,10 @@
+.mapContainer {
+    width: 636px;
+    height: 412px;
+}
+
+.marker {
+    color: red;
+    font-size: 6rem;
+    /* font-weight: bold; */
+}
