@@ -1,4 +1,7 @@
 import Nav from "../../components/Nav";
+import serviceImage from "../../images/Over-Project2.png";
+import EmailComponent from "../../components/EmailComponent";
+import "./style.css";
 
 const serviceList = [
   {
@@ -44,18 +47,53 @@ const serviceList = [
 ];
 
 function Services() {
+  const handlePhone = (phone) => {
+    window.open(`tel:+1${phone}`);
+  };
+
+  const phone1 = "6263352773";
+  const phone2 = "6262152656";
+
   return (
     <div>
       <Nav />
-      <div id="serviceListContainer">
-        {serviceList.map((service, index) => {
-          return (
-            <div className="serviceContent" key={index}>
-              <h3 className="serviceHeader">{service.header}</h3>
-              <div className="serviceBody">{service.body}</div>
+      <div className="servicePageContainer">
+        <div className="serviceListContainer">
+          {serviceList.map((service, index) => {
+            return (
+              <div className="serviceContent" key={index}>
+                <h3 className="serviceHeader">{service.header}</h3>
+                <div className="serviceBody">{service.body}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="serviceImageContainer">
+          <img
+            src={serviceImage}
+            alt="gym equipment"
+            className="servicePageImage"
+          />
+          <div className="serviceEmailHeader">
+            Have a question about a specific service?
+            <div className="contactPhone">
+              <br />
+              You can call us at:
+              <span onClick={() => handlePhone(phone1)}>
+                <br />
+                (626) 335-2773
+              </span>
+              <br />
+              or
+              <span onClick={() => handlePhone(phone2)}>
+                <br />
+                (626) 215-2656
+              </span>
             </div>
-          );
-        })}
+            Or send us an email below
+          </div>
+          <EmailComponent subject="Services and Repair" />
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,9 @@ import { useState } from "react";
 import API from "../../utils/API";
 import AddFeatured from "../../components/AddFeatured";
 import FeaturedList from "../../components/FeaturedList";
+import FeaturedPreview from "../../components/FeaturedPreview";
 import AdminNav from "../../components/AdminNav";
+import "./style.css";
 
 function AdminFeatured(props) {
   const [file, setFile] = useState();
@@ -52,7 +54,10 @@ function AdminFeatured(props) {
         newFeatured={newFeatured}
         setNewFeatured={setNewFeatured}
       />
-      <FeaturedList />
+      <div className="listPreviewContainer">
+        <FeaturedList />
+        <FeaturedPreview newFeatured={newFeatured} />
+      </div>
     </div>
   );
 }

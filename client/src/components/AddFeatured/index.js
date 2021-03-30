@@ -1,3 +1,5 @@
+import "./style.css";
+
 function AddFeatured(props) {
   const {
     handleUpload,
@@ -8,8 +10,9 @@ function AddFeatured(props) {
   } = props;
 
   return (
-    <div>
+    <div className="addFeaturedContainer">
       <div id="uploadImage">
+        <label htmlFor="uploadForm">Upload Image</label>
         <form id="uploadForm" onSubmit={handleUpload}>
           <input
             id="addImage"
@@ -23,14 +26,16 @@ function AddFeatured(props) {
       </div>
       <div id="featuredContent">
         <form id="featuredForm" onSubmit={handleFeaturedSubmit}>
+          <label htmlFor="addHeadline">Headline</label>
           <input
-            id="addHealine"
+            id="addHeadline"
             type="text"
             placeholder="Headline"
             onChange={(e) =>
               setNewFeatured({ ...newFeatured, headline: e.target.value })
             }
           ></input>
+          <label htmlFor="addDescription">Additional info</label>
           <input
             id="addDescription"
             type="text"

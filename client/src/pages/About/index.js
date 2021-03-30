@@ -1,4 +1,7 @@
 import Nav from "../../components/Nav";
+import EmailComponent from "../../components/EmailComponent";
+import aboutImage from "../../images/Over-Project3.png";
+import "./style.css";
 
 const aboutList = [
   {
@@ -22,16 +25,27 @@ function About() {
   return (
     <div>
       <Nav />
-      <h1 id="aboutHeadline">About Us</h1>
-      <div id="aboutListContainer">
-        {aboutList.map((content, index) => {
-          return (
-            <div className="aboutContent" key={index}>
-              <h3 className="aboutHeader">{content.header}</h3>
-              <div className="aboutBody">{content.body}</div>
-            </div>
-          );
-        })}
+      <div className="aboutContainer">
+        <div className="aboutTextContainer">
+          <div className="aboutListContainer">
+            {aboutList.map((content, index) => {
+              return (
+                <div className="aboutContent" key={index}>
+                  <h3 className="aboutHeader">{content.header}</h3>
+                  <div className="aboutBody">{content.body}</div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="aboutEmailHeader">
+            Have a question for our staff? <br />
+            Send us an email below
+          </div>
+          <EmailComponent subject="something" />
+        </div>
+        <div className="aboutImageContainer">
+          <img src={aboutImage} alt="kettlebells" className="aboutImage" />
+        </div>
       </div>
     </div>
   );

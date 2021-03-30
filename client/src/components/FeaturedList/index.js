@@ -7,7 +7,6 @@ const EditFeaturedList = (props) => {
   const [editFeatured, setEditFeatured] = useState({});
 
   const handleEditFeatured = () => {
-    console.log(editFeatured);
     API.updateFeatured(content._id, editFeatured).then((res) => {
       if (res.status === 422) {
         console.log(res);
@@ -26,6 +25,9 @@ const EditFeaturedList = (props) => {
           console.log(res);
           alert("Error deleting feature");
         } else {
+          API.deleteUpload(content.image).then((res) => {
+            console.log(res);
+          });
           alert("Feature deleted successfully!");
           window.location.reload();
         }

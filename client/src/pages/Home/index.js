@@ -5,10 +5,11 @@ import AdminNav from "../../components/AdminNav";
 import FeaturedCarousel from "../../components/FeaturedCarousel";
 import ServiceComponent from "../../components/ServiceComponent";
 import ContactComponent from "../../components/ContactComponent";
+import InstagramComponent from "../../components/InstagramComponent";
 import Footer from "../../components/Footer";
 import AdminContext from "../../utils/AdminContext";
 
-function Home(props) {
+function Home() {
   const { loggedIn } = useContext(AdminContext);
 
   return (
@@ -18,6 +19,7 @@ function Home(props) {
       <FeaturedCarousel />
       <ServiceComponent />
       <ContactComponent />
+      <InstagramComponent />
       <Footer />
     </div>
   );

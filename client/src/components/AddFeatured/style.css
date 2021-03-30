@@ -1,0 +1,23 @@
+.addFeaturedContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+#featuredForm {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#featuredForm input {
+    margin-bottom: 20px;
+}
+
+#addHeadline {
+    width: 200px;
+}
+
+#addFeaturedButton {
+    width: 160px;
+}

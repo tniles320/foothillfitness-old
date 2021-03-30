@@ -4,15 +4,18 @@ const SalePrice = (props) => {
   const { editProduct, setEditProduct } = props;
   if (editProduct.sale) {
     return (
-      <input
-        type="text"
-        className="salePrice"
-        placeholder="Set sale price"
-        defaultValue={editProduct.salePrice}
-        onChange={(e) =>
-          setEditProduct({ ...editProduct, salePrice: e.target.value })
-        }
-      ></input>
+      <div className="saleInputContainer">
+        <label htmlFor="salePrice">Sale Price</label>
+        <input
+          type="text"
+          className="salePrice"
+          placeholder="Set sale price"
+          defaultValue={editProduct.salePrice}
+          onChange={(e) =>
+            setEditProduct({ ...editProduct, salePrice: e.target.value })
+          }
+        ></input>
+      </div>
     );
   } else if (!editProduct.sale) {
     return null;

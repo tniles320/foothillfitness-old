@@ -92,7 +92,7 @@ export default {
       },
     });
   },
-  deleteUpload: function (id) {
-    return axios.delete(`/api/upload/${id}`);
+  deleteUpload: function (image) {
+    return axios.delete(`/api/image/${image}`);
   },
 };

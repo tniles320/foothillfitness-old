@@ -51,7 +51,11 @@ function FeaturedCarousel() {
 
   useEffect(() => {
     handleFeaturedContent().then(() => {
+      // if (featuredContent.length === 0) {
+      //   return;
+      // } else {
       glideMount();
+      // }
     });
   }, []);
 

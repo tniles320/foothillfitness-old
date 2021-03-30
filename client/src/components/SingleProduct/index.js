@@ -1,15 +1,16 @@
 import { useState, useEffect, useContext } from "react";
 import SaleComponent from "../../components/SaleComponent";
+import EmailComponent from "../../components/EmailComponent";
 import AdminContext from "../../utils/AdminContext";
 import API from "../../utils/API";
 import "./style.css";
 
 const LowQuantity = (props) => {
   const { quantity } = props;
-  if (quantity <= 2) {
-    return <div className="singleQuantity">Only {quantity} left!</div>;
-  } else if (quantity === 0) {
+  if (quantity === 0) {
     return <div className="singleQuantity">Currently sold out</div>;
+  } else if (quantity <= 2) {
+    return <div className="singleQuantity">Only {quantity} left!</div>;
   } else {
     return null;
   }
@@ -45,16 +46,16 @@ function SingleProduct(props) {
   const { loggedIn } = useContext(AdminContext);
   const [editProduct, setEditProduct] = useState({});
 
-  const handleEditProduct = () => {
+  const handleEditProduct = async () => {
     if (product.category === "strength") {
-      API.updateStrength(product._id, editProduct).then((res) => {
+      await API.updateStrength(product._id, editProduct).then((res) => {
         if (res.status === 422) {
           console.log(res);
           alert("Error editing product");
         }
       });
     } else if (product.category === "cardio") {
-      API.updateCardio(product._id, editProduct).then((res) => {
+      await API.updateCardio(product._id, editProduct).then((res) => {
         if (res.status === 422) {
           console.log(res);
           alert("Error adding product");
@@ -76,10 +77,10 @@ function SingleProduct(props) {
           alt={product.name}
           className="singleImage"
         />
-        <div className="singleTextContainer">
+        <div className="singleEditContainer">
           <label htmlFor="singleName">Name</label>
           <input
-            id="singleName"
+            className="singleEditName"
             defaultValue={product.name}
             onChange={(e) =>
               setEditProduct({ ...editProduct, name: e.target.value })
@@ -87,7 +88,7 @@ function SingleProduct(props) {
           ></input>
           <label htmlFor="singlePrice">Price</label>
           <input
-            className="singlePrice"
+            className="singleEditPrice"
             defaultValue={product.price}
             onChange={(e) =>
               setEditProduct({ ...editProduct, price: e.target.value })
@@ -95,6 +96,7 @@ function SingleProduct(props) {
           ></input>
           <label htmlFor="singleQuantity">Quantity</label>
           <input
+            className="singleEditQuantity"
             type="number"
             defaultValue={product.quantity}
             onChange={(e) =>
@@ -103,7 +105,7 @@ function SingleProduct(props) {
           ></input>
           <label htmlFor="singleDescription">Description</label>
           <textarea
-            className="singleDescription"
+            className="singleEditDescription"
             defaultValue={product.description}
             onChange={(e) =>
               setEditProduct({ ...editProduct, description: e.target.value })
@@ -128,11 +130,17 @@ function SingleProduct(props) {
           className="singleImage"
         />
         <div className="singleTextContainer">
-          <h3 className="singleBrand">{product.brand}</h3>
+          <h2 className="singleBrand">{product.brand}</h2>
           <h1 className="singleName">{product.name}</h1>
           <PriceComponent product={product} />
           <LowQuantity quantity={product.quantity} />
           <div className="singleDescription">{product.description}</div>
+          <div className="productEmail">
+            <div className="productEmailHeader">
+              Have a question about this product?
+            </div>
+            <EmailComponent subject={`${product.brand} ${product.name}`} />
+          </div>
         </div>
       </div>
     );

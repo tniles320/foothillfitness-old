@@ -73,73 +73,94 @@ function AddProduct(props) {
       </div>
       <div id="productContent">
         <form id="productForm" onSubmit={handleProductSubmit}>
-          <input
-            id="addName"
-            type="text"
-            placeholder="Product Name"
-            onChange={(e) =>
-              setNewProduct({ ...newProduct, name: e.target.value })
-            }
-          ></input>
-          <select
-            id="addCategory"
-            name="category"
-            onChange={(e) => {
-              handleCategoryChange(e);
-            }}
-          >
-            <option value="">Category</option>
-            <option value="cardio">Cardio</option>
-            <option value="strength">Strength</option>
-          </select>
-          <select
-            id="addSubCategory"
-            name="subCategory"
-            onChange={(e) =>
-              setNewProduct({
-                ...newProduct,
-                subCategory: e.target.value,
-              })
-            }
-          >
-            <option value="">Sub Category</option>
-            {categoryList.map((content, index) => {
-              return <SubCategoryList content={content} key={index} />;
-            })}
-          </select>
-          <textarea
-            id="addDescription"
-            type="text"
-            placeholder="Product description"
-            onChange={(e) =>
-              setNewProduct({ ...newProduct, description: e.target.value })
-            }
-          ></textarea>
-          <input
-            id="addBrand"
-            type="text"
-            placeholder="Brand"
-            onChange={(e) =>
-              setNewProduct({ ...newProduct, brand: e.target.value })
-            }
-          ></input>
-          <input
-            id="addPrice"
-            type="text"
-            placeholder="Price"
-            onChange={(e) =>
-              setNewProduct({ ...newProduct, price: e.target.value })
-            }
-          ></input>
-          <input
-            id="addQuantity"
-            type="text"
-            placeholder="Quantity"
-            onChange={(e) =>
-              setNewProduct({ ...newProduct, quantity: e.target.value })
-            }
-          ></input>
-          <button id="addFeaturedButton" onClick={handleProductSubmit}>
+          <div className="nameDiv">
+            <label htmlFor="addName">Name</label>
+            <input
+              id="addName"
+              type="text"
+              placeholder="Product Name"
+              onChange={(e) =>
+                setNewProduct({ ...newProduct, name: e.target.value })
+              }
+            ></input>
+          </div>
+          <div className="categoryDiv">
+            <label htmlFor="addCategory">Category</label>
+            <select
+              id="addCategory"
+              name="category"
+              onChange={(e) => {
+                handleCategoryChange(e);
+              }}
+            >
+              <option value="">Category</option>
+              <option value="cardio">Cardio</option>
+              <option value="strength">Strength</option>
+            </select>
+          </div>
+          <div className="subCategoryDiv">
+            <label htmlFor="addSubCategory">Sub Category</label>
+            <select
+              id="addSubCategory"
+              name="subCategory"
+              onChange={(e) =>
+                setNewProduct({
+                  ...newProduct,
+                  subCategory: e.target.value,
+                })
+              }
+            >
+              <option value="">Sub Category</option>
+              {categoryList.map((content, index) => {
+                return <SubCategoryList content={content} key={index} />;
+              })}
+            </select>
+          </div>
+          <div className="descriptionDiv">
+            <label htmlFor="addDescription">Description</label>
+            <textarea
+              id="addDescription"
+              type="text"
+              placeholder="Product description"
+              onChange={(e) =>
+                setNewProduct({ ...newProduct, description: e.target.value })
+              }
+            ></textarea>
+          </div>
+          <div className="brandDiv">
+            <label htmlFor="addBrand">Brand</label>
+            <input
+              id="addBrand"
+              type="text"
+              placeholder="Brand"
+              onChange={(e) =>
+                setNewProduct({ ...newProduct, brand: e.target.value })
+              }
+            ></input>
+          </div>
+          <div className="priceDiv">
+            <label htmlFor="addPrice">Price</label>
+            <input
+              id="addPrice"
+              type="text"
+              placeholder="Price"
+              onChange={(e) =>
+                setNewProduct({ ...newProduct, price: e.target.value })
+              }
+            ></input>
+          </div>
+          <div className="quantityDiv">
+            <label htmlFor="addQuantity">Quantity</label>
+            <input
+              id="addQuantity"
+              type="text"
+              placeholder="Quantity"
+              onChange={(e) =>
+                setNewProduct({ ...newProduct, quantity: e.target.value })
+              }
+            ></input>
+          </div>
+          <button id="addProductButton" onClick={handleProductSubmit}>
             Add New Product
           </button>
         </form>

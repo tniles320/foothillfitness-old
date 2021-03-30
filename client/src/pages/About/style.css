@@ -1,0 +1,36 @@
+.aboutContainer {
+    display: flex;
+    margin: 20px;
+}
+
+.aboutTextContainer {
+    margin: 5px 40px 0 40px;
+    max-width: 40%;
+}
+
+.aboutHeadliine {
+    font-size: 2rem;
+}
+
+.aboutHeader {
+    font-size: 2rem;
+}
+
+.aboutBody {
+    font-size: 1.4rem;
+}
+
+.aboutImageContainer {
+    max-width: 60%;
+}
+
+.aboutImage {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.aboutEmailHeader {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: rgb(190, 0, 0);
+}

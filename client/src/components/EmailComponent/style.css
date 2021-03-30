@@ -1,0 +1,37 @@
+.emailContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.emailContainer label {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+#emailName,
+#emailEmail,
+#emailBody,
+.emailButton {
+    border-radius: 4px;
+}
+
+#emailName,
+#emailEmail {
+    width: 50%;
+    height: 20px;
+}
+
+#emailBody {
+    height: 100px;
+    width: 70%;
+}
+
+.emailButton {
+    margin-top: 10px;
+    width: 140px;
+    font-size: 1.1rem;
+}
+
+.emailButton:hover {
+    cursor: pointer;
+}

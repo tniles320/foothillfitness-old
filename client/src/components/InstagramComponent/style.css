@@ -1,0 +1,42 @@
+.instagramContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px 0 20px;
+    height: 412px;
+    margin: 40px 20px 40px 0;
+}
+
+.homeInstagramText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px 0 0 40px;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
+}
+
+.instaDescription {
+    font-size: 2rem;
+    margin-top: 20px;
+    line-height: 3rem;
+}
+
+.instagramIcon {
+    margin-top: 30px;
+    font-size: 6rem;
+    border-radius: 20px;
+    background: rgb(240, 148, 51); 
+    background: -moz-linear-gradient(45deg, rgb(240, 148, 51) 0%, rgb(230, 104, 60) 25%, rgb(220, 39, 67) 50%, rgb(204, 35, 102) 75%, rgb(188, 24, 136) 100%); 
+    background: -webkit-linear-gradient(45deg, rgb(240, 148, 51) 0%,rgb(230, 104, 60) 25%,rgb(220, 39, 67) 50%,rgb(204, 35, 102) 75%,rgb(188, 24, 136) 100%); 
+    background: linear-gradient(45deg, rgb(240, 148, 51) 0%,rgb(230, 104, 60) 25%,rgb(220, 39, 67) 50%,rgb(204, 35, 102) 75%,rgb(188, 24, 136) 100%); 
+}
+
+.instagramIcon:hover {
+    cursor: pointer;
+}
+
+.instaImg {
+    width: 636px;
+    height: 412px;
+    border-radius: 2px;
+}

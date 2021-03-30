@@ -15,7 +15,8 @@
   #sidebar div {
     padding: 8px 8px 8px 40px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     color: rgb(27, 27, 27);
     background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255, 0), rgb(255, 255, 255));
     display: block;

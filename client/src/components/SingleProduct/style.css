@@ -1,22 +1,59 @@
 .singleProductContainer {
     display: flex;
     justify-content: space-evenly;
+    margin: 40px 0 40px 0;
 }
 
 .singleImage {
-    max-height: 500px;
-    max-width: 500px;
+    min-height: 500px;
+    min-width: 500px;
+    max-width: 50%;
+    border-radius: 2px;
 }
 
 .singleTextContainer {
-    max-width: 500px;
+    width: 600px;
 }
 
 .singleQuantity {
     color: rgb(224, 15, 15);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .singleDescription {
     padding-top: 40px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.productEmail {
+    margin: 40px 0 40px 0;
+}
+
+.productEmailHeader {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: rgb(190, 0, 0);
+}
+
+.singleEditContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.singleEditContainer input,
+.singleEditContainer textarea {
+    margin: 10px;
+}
+
+.singleEditDescription {
+    height: 100px;
+    width: 250px;
+}
+
+.editProductButton {
+    width: 100px;
+    margin-top: 20px;
 }

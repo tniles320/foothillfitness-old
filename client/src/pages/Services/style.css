@@ -1,0 +1,30 @@
+.servicePageContainer {
+    display: flex;
+    margin: 20px;
+}
+
+.serviceListContainer {
+    margin: 40px;
+}
+
+.serviceHeader {
+    font-size: 2rem;
+}
+
+.serviceBody {
+    font-size: 1.4rem;
+}
+
+.serviceImageContainer {
+    max-width: 50%;
+}
+
+.servicePageImage {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.serviceEmailHeader {
+    margin-top: 40px;
+    font-size: 1.5rem;
+}

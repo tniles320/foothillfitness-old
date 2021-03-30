@@ -7,14 +7,23 @@
     flex-wrap: wrap;
 }
 
-#uploadImage,
-#addName,
-#addCategory,
-#addSubCategory,
-#addDescription,
-#addBrand,
-#addPrice,
-#addQuantity,
-#addFeaturedButton {
+#productForm div {
+    display: flex;
+    flex-direction: column;
     margin: 10px;
+}
+
+#uploadImage {
+    margin: 10px;
+}
+
+#addProductButton {
+    width: 150px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+#addDescription {
+    width: 350px;
+    height: 100px;
 }

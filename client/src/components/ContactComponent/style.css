@@ -16,13 +16,30 @@
     font-size: 1.5rem;
 }
 
+.streetLocation span {
+    text-decoration: underline;
+    color: rgb(0, 0, 190);
+}
+
+.streetLocation span:hover {
+    cursor: pointer;
+}
+
 .contactPhone {
     font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contactPhone span {
+    text-decoration: underline;
+    color: rgb(0, 0, 190);
+}
+
+.contactPhone span:hover {
+    cursor: pointer;
 }
 
 .contactLink {
-    text-decoration: none;
-    color: black;
     font-size: 1.5rem;
 }
 

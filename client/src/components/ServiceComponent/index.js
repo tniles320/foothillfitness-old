@@ -9,9 +9,9 @@ function ServiceComponent() {
       <div className="homeServiceText">
         <div className="homeHeader">Services</div>
         <Link to="/services" className="serviceLink">
-          We offer repair, set-up, and many other related services. <br />
+          We offer repair, set-up, and other related services. <br />
           <br />
-          Click here to find out more!
+          <span>Click here to find out more!</span>
         </Link>
       </div>
     </div>
