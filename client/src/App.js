@@ -12,6 +12,7 @@ import StrengthProduct from "./pages/StrengthProduct";
 import NoMatch from "./pages/NoMatch";
 import AdminFeatured from "./pages/AdminFeatured";
 import AdminAddProduct from "./pages/AdminAddProduct";
+import AdminBrand from "./pages/AdminBrand";
 import AdminLogin from "./pages/AdminLogin";
 import ADMIN from "./utils/ADMIN";
 import AdminContext from "./utils/AdminContext";
@@ -87,6 +88,9 @@ function App() {
               </Route>
               <Route exact path="/admin/featured">
                 <AdminFeatured />
+              </Route>
+              <Route exact path="/admin/brands">
+                <AdminBrand />
               </Route>
               <Route exact path="/admin/add-product">
                 <AdminAddProduct />

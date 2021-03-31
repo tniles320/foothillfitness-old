@@ -1,5 +1,6 @@
 import Nav from "../../components/Nav";
 import EmailComponent from "../../components/EmailComponent";
+import Footer from "../../components/Footer";
 import aboutImage from "../../images/Over-Project3.png";
 import "./style.css";
 
@@ -47,6 +48,7 @@ function About() {
           <img src={aboutImage} alt="kettlebells" className="aboutImage" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Nav from "../../components/Nav";
 import serviceImage from "../../images/Over-Project2.png";
 import EmailComponent from "../../components/EmailComponent";
+import Footer from "../../components/Footer";
 import "./style.css";
 
 const serviceList = [
@@ -95,6 +96,7 @@ function Services() {
           <EmailComponent subject="Services and Repair" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

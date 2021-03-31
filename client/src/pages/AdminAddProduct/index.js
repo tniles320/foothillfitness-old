@@ -4,7 +4,7 @@ import AddProduct from "../../components/AddProduct";
 import AdminNav from "../../components/AdminNav";
 import ProductPreview from "../../components/ProductPreview";
 
-function AdminAddProduct(props) {
+function AdminAddProduct() {
   const [file, setFile] = useState();
   const [newProduct, setNewProduct] = useState({
     name: "",
@@ -64,7 +64,7 @@ function AdminAddProduct(props) {
 
   return (
     <div>
-      <AdminNav handleLogout={props.handleLogout} />
+      <AdminNav />
       <AddProduct
         handleUpload={handleUpload}
         handleFilechange={handleFilechange}

@@ -6,7 +6,7 @@ import FeaturedPreview from "../../components/FeaturedPreview";
 import AdminNav from "../../components/AdminNav";
 import "./style.css";
 
-function AdminFeatured(props) {
+function AdminFeatured() {
   const [file, setFile] = useState();
   const [newFeatured, setNewFeatured] = useState({
     headline: "",
@@ -46,7 +46,7 @@ function AdminFeatured(props) {
 
   return (
     <div>
-      <AdminNav handleLogout={props.handleLogout} />
+      <AdminNav />
       <AddFeatured
         handleUpload={handleUpload}
         handleFilechange={handleFilechange}

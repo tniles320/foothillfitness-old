@@ -18,9 +18,6 @@ function ProductCard(props) {
             alert("Error deleting product");
           }
         });
-        API.deleteUpload(product.image).then((res) => {
-          console.log(res);
-        });
       } else {
         API.deleteStrength(product._id).then((res) => {
           console.log(product);
@@ -29,10 +26,8 @@ function ProductCard(props) {
             alert("Error deleting product");
           }
         });
-        API.deleteUpload(product.image).then((res) => {
-          console.log(res);
-        });
       }
+      API.deleteUpload(product.image);
       alert("Product deleted successfully!");
     } else {
       return;

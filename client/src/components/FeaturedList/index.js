@@ -63,9 +63,9 @@ const EditFeaturedList = (props) => {
         </div>
       </div>
       <button className="editFeaturedButton" onClick={handleEditFeatured}>
-        Submit Changes
+        Save Changes
       </button>
-      <button className="deleteFeaturedButtton" onClick={handleDeleteFeatured}>
+      <button className="deleteFeaturedButton" onClick={handleDeleteFeatured}>
         &#10006;
       </button>
     </div>

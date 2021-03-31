@@ -33,8 +33,8 @@ function FeaturedCarousel() {
     await API.getFeatured().then((res) => {
       res.data.map((content) => {
         return setFeaturedContent((featuredContent) => [
-          ...featuredContent,
           content,
+          ...featuredContent,
         ]);
       });
     });
@@ -51,10 +51,10 @@ function FeaturedCarousel() {
 
   useEffect(() => {
     handleFeaturedContent().then(() => {
-      // if (featuredContent.length === 0) {
-      //   return;
-      // } else {
+      // if (featuredContent.length !== 0) {
       glideMount();
+      // } else {
+      //   return;
       // }
     });
   }, []);

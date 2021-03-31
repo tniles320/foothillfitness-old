@@ -1,0 +1,20 @@
+footer {
+    background-color: rgb(20, 20, 20);
+    background: linear-gradient(to right, rgb(20, 20, 20, 0), rgb(20, 20, 20, 0.7), rgb(20, 20, 20), rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0));
+    padding: 10px;
+    margin-top: 40px;
+}
+
+footer div {
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.footerName {
+    font-size: 1.4rem;
+}
+
+.footerPhone {
+    color: rgb(212, 2, 2);
+}

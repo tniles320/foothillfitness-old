@@ -1,0 +1,17 @@
+.addBrandContainer {
+    margin: 40px;
+}
+
+.brandForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandForm input {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.addBrandButton {
+    width: 80px;
+}

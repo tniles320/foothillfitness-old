@@ -1,0 +1,4 @@
+.brandListContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
