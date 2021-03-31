@@ -64,7 +64,7 @@ function Contact() {
           >
             1736 S Grand Ave, Glendora, CA 91740
           </span>
-          <content>Click the link to begin navigation</content>
+          <div>Click the link to begin navigation</div>
         </div>
         <MapComponent />
       </div>
@@ -78,7 +78,7 @@ function Contact() {
         </div>
         <div className="contactEmailContainer">
           <div className="contactEmailHeader">
-            Have a question about a specific service?
+            Have a question for our staff?
             <div className="contactPhone">
               <br />
               You can call us at:

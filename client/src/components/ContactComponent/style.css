@@ -43,7 +43,41 @@
     font-size: 1.5rem;
 }
 
-/* .serviceImg {
-    width: 636px;
-    height: 412px;
-} */
+@media screen and (max-width: 1150px) {
+    
+    .streetLocation {
+        font-size: 1.4rem;
+    }
+    
+    .contactPhone {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .contactLink {
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media screen and (max-width: 976px) {
+
+    .homeContactContainer {
+        height: 300px;
+        margin: 40px 10px 40px 10px;
+    }
+    
+    .streetLocation {
+        font-size: 1.2rem;
+    }
+    
+    .contactPhone {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    
+    .contactLink {
+        font-size: 1.2rem;
+    }
+    
+}

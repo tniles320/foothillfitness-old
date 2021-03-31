@@ -38,14 +38,16 @@ function About() {
               );
             })}
           </div>
-          <div className="aboutEmailHeader">
-            Have a question for our staff? <br />
-            Send us an email below
-          </div>
-          <EmailComponent subject="something" />
         </div>
         <div className="aboutImageContainer">
           <img src={aboutImage} alt="kettlebells" className="aboutImage" />
+          <div className="aboutEmailContainer">
+            <div className="aboutEmailHeader">
+              Have a question for our staff? <br />
+              Send us an email below
+            </div>
+            <EmailComponent subject="something" />
+          </div>
         </div>
       </div>
       <Footer />

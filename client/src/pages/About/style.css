@@ -24,6 +24,10 @@
     max-width: 60%;
 }
 
+.aboutEmailContainer {
+    width: 600px;
+}
+
 .aboutImage {
     width: 100%;
     border-radius: 4px;
@@ -33,4 +37,36 @@
     margin-top: 40px;
     font-size: 1.5rem;
     color: rgb(190, 0, 0);
+}
+
+@media screen and (max-width: 976px) {
+
+    .aboutContainer {
+        margin: 10px;
+    }
+    
+    .aboutTextContainer {
+        margin: 5px 20px 0 20px;
+    }
+
+    .aboutHeadliine {
+        font-size: 1.5rem;
+    }
+    
+    .aboutHeader {
+        font-size: 1.5rem;
+    }
+    
+    .aboutBody {
+        font-size: 1rem;
+    }
+
+    .aboutEmailContainer {
+        width: 400px;
+    }
+    
+    .aboutEmailHeader {
+        font-size: 1.2rem;
+    }
+
 }

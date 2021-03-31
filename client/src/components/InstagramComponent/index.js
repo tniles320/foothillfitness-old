@@ -10,7 +10,7 @@ function InstagramComponent() {
     <div className="instagramContainer">
       <img src={instaImage} alt="dumbells" className="instaImg" />
       <div className="homeInstagramText">
-        <div className="homeHeader">Follow us on Instagram</div>
+        <div className="instaHeader">Follow us on Instagram</div>
         <div className="instaDescription">
           We post daily about new equipment and sales! <br />
           Click the link below!

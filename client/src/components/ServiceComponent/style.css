@@ -41,7 +41,43 @@
 }
 
 .serviceImg {
-    width: 636px;
-    height: 412px;
+    width: 50%;
+    max-width: 636px;
+    height: 100%;
     border-radius: 2px;
 }
+
+@media screen and (max-width: 1150px) {
+
+    .homeServiceContainer {
+        margin: 20px 10px 20px 0;
+    }
+    
+    
+    .homeHeader {
+        font-size: 2.5rem;
+    }
+    
+    .serviceLink {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 976px) {
+
+    .homeServiceContainer {
+        height: 300px;
+    }
+    
+    .homeHeader {
+        font-size: 2rem;
+        width: 70%;
+    }
+    
+    .serviceLink {
+        font-size: 1.5rem;
+    }
+
+}
+

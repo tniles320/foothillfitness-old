@@ -28,4 +28,18 @@
     color: rgb(241, 241, 241);
     cursor: pointer;
   }
+
+  @media screen and (max-width: 976px) {
+
+    #sidebar {
+      width: 180px;
+    }
+    
+    /* The navigation menu links */
+    #sidebar div {
+      padding: 8px 8px 8px 20px;
+      font-size: 1.2rem;
+    }
+
+}
   

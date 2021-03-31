@@ -60,3 +60,30 @@
     font-size: 1rem;
     margin-top: 5px;
 }
+
+@media screen and (max-width: 976px) {
+
+    .productContainer {
+        margin-left: 190px;
+    }
+    
+    .productCard {
+        height: 235px;
+        width: 164px;
+        margin: 0 10px 20px 10px;
+    }
+    
+    .productImage {
+        height: 164px;
+        width: 164px;
+    }
+    
+    .productLink {
+        font-size: 1rem;
+    }
+    
+    .saleBanner {
+        font-size: 0.8rem;
+    }
+
+}

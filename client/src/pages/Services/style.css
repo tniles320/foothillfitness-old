@@ -28,3 +28,27 @@
     margin-top: 40px;
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 976px) {
+
+    .servicePageContainer {
+        margin: 10px;
+    }
+    
+    .serviceListContainer {
+        margin: 20px;
+    }
+    
+    .serviceHeader {
+        font-size: 1.5rem;
+    }
+    
+    .serviceBody {
+        font-size: 1rem;
+    }
+    
+    .serviceEmailHeader {
+        font-size: 1.2rem;
+    }
+
+}

@@ -15,6 +15,16 @@
     background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255), rgb(255, 255, 255, 0));
 }
 
+.instaHeader {
+    align-self: center;
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0, 0), rgb(255, 0, 0));
+}
+
 .instaDescription {
     font-size: 2rem;
     margin-top: 20px;
@@ -36,7 +46,48 @@
 }
 
 .instaImg {
-    width: 636px;
-    height: 412px;
-    border-radius: 2px;
+    max-width: 636px;
+    width: 50%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+
+    .instaHeader {
+        font-size: 2rem;
+    }
+    
+    .instaDescription {
+        margin-top: 10px;
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+    
+    .instagramIcon {
+        font-size: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 976px) {
+
+    .instagramContainer {
+        height: 300px;
+        margin: 40px 10px 40px 0;
+    }
+
+    .instaHeader {
+        font-size: 1.4rem;
+    }
+    
+    .instaDescription {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+    }
+    
+    .instagramIcon {
+        margin-top: 10px;
+        font-size: 4rem;
+    }
+
 }

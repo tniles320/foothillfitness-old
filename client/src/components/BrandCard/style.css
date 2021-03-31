@@ -3,3 +3,12 @@
     max-width: 300px;
     margin: 20px;
 }
+
+@media screen and (max-width: 976px) {
+
+    .brandImage {
+        max-width: 180px;
+        margin: 20px;
+    }
+
+}

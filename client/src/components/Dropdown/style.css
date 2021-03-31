@@ -59,3 +59,33 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  @media screen and (max-width: 1150px) {
+
+    .dropdown {
+      padding: 15px;
+
+    }
+
+    .dropdown .dropbtn {
+      font-size: 1.2rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 976px) {
+
+    .dropdown {
+      padding: 12px;
+      box-shadow: 6px 6px 9px 0px rgb(0, 0, 0, 0.6);
+    }
+
+    .dropdown .dropbtn {
+      font-size: 1rem;
+    }
+
+    .dropdown-content a {
+      padding: 8px 16px;
+    }
+    
+  }

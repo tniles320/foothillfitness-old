@@ -19,8 +19,8 @@
 }
 
 .featuredImage {
-    height: 800px;
-    min-width: 800px;
+    height: 100%;
+    max-width: 80%;
     margin: auto;
 }
 
@@ -61,4 +61,42 @@
 .featuredDescription {
     font-size: 2rem;
     max-width: 600px;
+}
+
+@media screen and (max-width: 1150px) {
+
+    .glide {
+        margin-top: 20px;
+    }
+
+    .featured {
+        height: 600px;
+        width: 100%;
+    }
+
+    .featuredContainer {
+        height: 600px;
+    }
+
+    .featuredHeadline {
+        font-size: 3rem;
+    }
+    
+    .featuredDescription {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 976px) {
+
+    .featured {
+        height: 400px;
+        width: 100%;
+    }
+
+    .featuredContainer {
+        height: 400px;
+    }
+
 }

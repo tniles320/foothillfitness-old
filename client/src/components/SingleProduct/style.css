@@ -5,8 +5,8 @@
 }
 
 .singleImage {
-    min-height: 500px;
-    min-width: 500px;
+    /* min-height: 500px;
+    min-width: 500px; */
     max-width: 50%;
     border-radius: 2px;
 }
@@ -29,6 +29,7 @@
 
 .productEmail {
     margin: 40px 0 40px 0;
+    width: 600px;
 }
 
 .productEmailHeader {
@@ -56,4 +57,65 @@
 .editProductButton {
     width: 100px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+    
+    .singleImage {
+        max-height: 500px;
+    }
+    
+    .singleTextContainer {
+        width: 400px;
+    }
+    
+    .singleQuantity {
+        font-size: 1.1rem;
+    }
+    
+    .singleDescription {
+        padding-top: 20px;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .productEmail {
+        width: 500px;
+    }
+    
+}
+
+@media screen and (max-width: 976px) {
+
+    .singleBrand {
+        font-size: 1.1rem;
+    }
+    .singleName {
+        font-size: 1.5rem;
+    }
+
+    .singlePrice {
+        font-size: 1.2rem;
+    }
+    
+    .singleImage {
+        max-height: 400px;
+    }
+    
+    .singleTextContainer {
+        width: 300px;
+    }
+    
+    .singleQuantity {
+        font-size: 1rem;
+    }
+    
+    .singleDescription {
+        font-size: 1rem;
+    }
+
+    .productEmail {
+        width: 300px;
+    }
+    
 }
