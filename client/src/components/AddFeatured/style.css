@@ -21,3 +21,15 @@
 #addFeaturedButton {
     width: 160px;
 }
+
+@media screen and (max-width: 764px) {
+
+    .addFeaturedContainer {
+        margin: 10px;
+    }
+    
+    #featuredForm {
+        width: 80%;
+    }
+
+}

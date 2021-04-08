@@ -38,8 +38,8 @@
   }
 
   #open-nav {
-    background: rgba(255, 255, 255, 0.15);
-    color: rgb(204, 196, 196);
+    background: rgba(255, 255, 255);
+    color: rgb(37, 37, 37);
     font-size: 1.8rem;
     display: none;
     box-shadow: rgb(4, 0, 65, 0.3) 1px 1px 10px 10px;

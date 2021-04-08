@@ -70,3 +70,35 @@
     }
 
 }
+
+@media screen and (max-width: 764px) {
+
+    .aboutContainer {
+        margin: 5px 5px 80px 5px;
+    }
+    
+    .aboutTextContainer {
+        margin: 5px 10px 0 5px;
+    }
+
+    .aboutHeadliine {
+        font-size: 0.9rem;
+    }
+    
+    .aboutHeader {
+        font-size: 0.9rem;
+    }
+    
+    .aboutBody {
+        font-size: 0.8rem;
+    }
+
+    .aboutEmailContainer {
+        width: 95%;
+    }
+    
+    .aboutEmailHeader {
+        font-size: 1rem;
+    }
+
+}

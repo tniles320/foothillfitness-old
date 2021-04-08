@@ -1,0 +1,17 @@
+.brandPreviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandImagePreview {
+    max-width: 200px;
+}
+
+@media screen and (max-width: 764px) {
+
+    .brandPreviewContainer {
+        margin-bottom: 40px;
+    }
+
+}

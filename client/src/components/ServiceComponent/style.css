@@ -68,6 +68,7 @@
 
     .homeServiceContainer {
         height: 300px;
+        margin: 10px 5px 10px 0;
     }
     
     .homeHeader {
@@ -81,3 +82,25 @@
 
 }
 
+@media screen and (max-width: 764px) {
+
+    .homeServiceContainer {
+        height: 200px;
+        padding: 0 5px 0 5px;
+    }
+
+    .homeServiceText {
+        padding: 10px 0 0 20px;
+    }
+    
+    .homeHeader {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .serviceLink {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+}

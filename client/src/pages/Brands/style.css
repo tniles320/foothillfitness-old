@@ -12,3 +12,16 @@
     margin-bottom: 10px;
     color: rgb(190, 0, 0);
 }
+
+@media screen and (max-width: 764px) {
+
+    .brandPageContainer {
+        margin: 10px;
+    }
+    
+    .brandEmail {
+        margin: 10px 0 10px 0;
+        width: 90%;
+    }
+    
+}

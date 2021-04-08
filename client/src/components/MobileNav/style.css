@@ -1,4 +1,4 @@
-.sideNavLogo {
+.mobileNavContainer {
     display: none;
 }
 
@@ -6,15 +6,30 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 764px) {
+
+    .mobileNavContainer {
+        display: block;
+    }
+
+    .mobileLogoLink {
+        background-color: rgb(255, 255, 255);
+        padding: 5px 0 5px 0;
+    }
+
+    .mobileLogoLink a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
     .sideNavLogo {
-        display: block;
+        width: 50%;
     }
 
     #open-nav {
         display: block;
-      }  
+    }  
     
 }
 

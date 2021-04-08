@@ -35,3 +35,27 @@
 .emailButton:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 764px) {
+
+    #emailName,
+    #emailEmail {
+        width: 90%;
+        height: 15px;
+    }
+
+    .emailContainer label {
+        font-size: 0.9rem;
+    }
+
+    #emailBody {
+        height: 100px;
+        width: 90%;
+    }
+
+    .emailButton {
+        width: 120px;
+        font-size: 0.9rem;
+    }
+
+}

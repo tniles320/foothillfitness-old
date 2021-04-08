@@ -27,3 +27,11 @@
     width: 350px;
     height: 100px;
 }
+
+@media screen and (max-width: 764px) {
+
+    .addProductContainer {
+        flex-direction: column;
+    }
+    
+}

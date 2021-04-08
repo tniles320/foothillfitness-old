@@ -1,0 +1,43 @@
+
+  /* The dropdown container */
+  .mobileDropdown {
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background-color: white;
+    padding: 0 20px 0 20px;
+  }
+  
+  /* Dropdown button */
+  .mobileDropdown .mobileDropbtn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .mobileDropContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    width: inherit;
+    z-index: 1;
+    height: auto;
+  }
+  
+  /* Links inside the dropdown */
+  .mobileNavLink {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 11px;
+    font-size: 1.1rem;
+  }
+
+  .navLogout {
+    padding: 11px;
+    font-size: 1.1rem;
+  }

@@ -119,3 +119,65 @@
     }
     
 }
+
+@media screen and (max-width: 764px) {
+
+    .singleProductContainer {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        align-items: center;
+        margin: 40px 0 40px 0;
+    }
+
+    .singleBrand {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .singleName {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .singlePrice {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .singleImage {
+        max-height: 400px;
+        max-width: 95%;
+    }
+    
+    .singleTextContainer {
+        width: 90%;
+    }
+    
+    .singleQuantity {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .singleDescription {
+        font-size: 0.9rem;
+    }
+
+    .productEmail {
+        width: 95%;
+    }
+
+    .singleEditContainer {
+        max-width: 90%;
+        width: 70%;
+    }
+
+    .singleEditContainer input {
+        width: 50%;
+    }
+    
+    .singleEditDescription {
+        height: 150px;
+        width: 90%;
+    }
+    
+}

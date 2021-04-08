@@ -8,7 +8,7 @@ function BrandPreview(props) {
       <img
         src={`http://localhost:3001/public/uploads/${newBrand.image}`}
         alt={newBrand.name}
-        className="imagePreview"
+        className="brandImagePreview"
       />
     </div>
   );

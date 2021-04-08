@@ -52,3 +52,27 @@
     }
 
 }
+
+@media screen and (max-width: 764px) {
+
+    .servicePageContainer {
+        margin: 10px;
+    }
+    
+    .serviceListContainer {
+        margin: 10px;
+    }
+    
+    .serviceHeader {
+        font-size: 0.9rem;
+    }
+    
+    .serviceBody {
+        font-size: 0.8rem;
+    }
+    
+    .serviceEmailHeader {
+        font-size: 1rem;
+    }
+
+}

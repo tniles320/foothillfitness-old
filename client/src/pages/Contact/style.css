@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     margin: 20px;
+    height: 400px;
 }
 
 .contactStreetLocation {
@@ -57,6 +58,7 @@
 
     .mapLocation {
         margin: 10px;
+        height: 360px;
     }
     
     .contactStreetLocation {
@@ -82,6 +84,49 @@
     .contactEmailContainer {
         margin: 0 0 0 50px;
         width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 764px) {
+
+    .mapLocation {
+        margin: 5px;
+        height: 500px;
+        flex-direction: column;
+    }
+    
+    .contactStreetLocation {
+        margin: 10px 0 0 5px;
+        font-size: 1rem;
+    }
+    
+    .hours {
+        font-size: 0.7rem;
+    }
+    
+    .contactStreetLocation span {
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+    }
+    
+    .contactPageContainer {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .contactImageContainer {
+        margin-top: 10px;
+        align-self: center;
+        max-width: 95%;
+    }
+    
+    .contactEmailHeader {
+        font-size: 1rem;
+    }
+    .contactEmailContainer {
+        margin: 5px;
+        width: 95%;
     }
 
 }

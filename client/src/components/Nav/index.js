@@ -1,10 +1,7 @@
 import { useState } from "react";
 import TopNav from "../TopNav";
-import SideNav from "../SideNav";
+import MobileNav from "../MobileNav";
 import "./style.css";
-
-// sideNav Contents
-const Contents = (props) => <div>{props.children}</div>;
 
 const links = [
   {
@@ -50,17 +47,12 @@ function Nav() {
   return (
     <div>
       <TopNav links={links} equipList={equipList} />
-      <SideNav
+      <MobileNav
         open={navState.sideNavOpen}
         onCloseClick={handleSideNavClose}
         links={links}
         equipList={equipList}
       />
-      <Contents open={navState.sideNavOpen}>
-        <button id="open-nav" onClick={handleSideNavOpen}>
-          &#9776;
-        </button>
-      </Contents>
     </div>
   );
 }

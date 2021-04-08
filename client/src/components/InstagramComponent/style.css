@@ -91,3 +91,34 @@
     }
 
 }
+
+@media screen and (max-width: 764px) {
+
+    .instagramContainer {
+        height: 200px;
+        padding: 0 5px 0 5px;
+        margin: 20px 5px 0px 0;
+    }
+
+    .homeInstagramText {
+        padding: 20px 0 0 20px;
+    }
+
+    .instaHeader {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        width: 90%;
+    }
+    
+    .instaDescription {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+    
+    .instagramIcon {
+        margin-top: 15px;
+        font-size: 3.5rem;
+        border-radius: 15px;
+    }
+
+}

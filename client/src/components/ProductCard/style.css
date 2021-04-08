@@ -87,3 +87,42 @@
     }
 
 }
+
+@media screen and (max-width: 764px) {
+
+    .productContainer {
+        margin-left: 120px;
+    }
+    
+    .productCard {
+        height: 170px;
+        width: 110px;
+        margin: 5px 5px 5px 5px;
+    }
+    
+    .productImage {
+        height: 110px;
+        width: 110px;
+    }
+    
+    .productLink {
+        font-size: 0.8rem;
+    }
+
+    .productBrand {
+        margin-top: 8px;
+    }
+    
+    .productName {
+        margin-top: 2px;
+    }
+    
+    .saleBanner {
+        font-size: 0.7rem;
+    }
+
+    .deleteProduct {
+        position: relative;
+    }
+
+}

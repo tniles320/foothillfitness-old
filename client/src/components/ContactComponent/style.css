@@ -81,3 +81,31 @@
     }
     
 }
+
+@media screen and (max-width: 764px) {
+
+    .homeContactContainer {
+        height: 200px;
+        padding: 0 5px 0 5px;
+        margin: 20px 5px 10px 5px;
+    }
+
+    .homeContactText {
+        padding-top: 5px;
+    }
+
+    .streetLocation {
+        font-size: 0.7rem;
+    }
+    
+    .contactPhone {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    
+    .contactLink {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+}

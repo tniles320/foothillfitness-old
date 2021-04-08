@@ -100,3 +100,36 @@
     }
 
 }
+
+@media screen and (max-width: 764px) {
+
+    .glide {
+        margin-top: 10px;
+    }
+
+    .glide__arrow--left {
+        left: 1em;
+    }
+
+    .glide__arrow--right {
+        right: 1em;
+    }
+
+    .featured {
+        height: 280px;
+    }
+
+    .featuredContainer {
+        height: 280px;
+    }
+
+    .featuredHeadline {
+        font-size: 1.6rem;
+    }
+    
+    .featuredDescription {
+        font-size: 1rem;
+        max-width: 250px;
+    }
+
+}
