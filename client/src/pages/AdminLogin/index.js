@@ -9,17 +9,17 @@ function AdminLogin(props) {
     password: "",
   });
 
-  // const userData = { username: "tniles320@gmail.com", password: "password" };
-  // const register = () => {
-  //   console.log(userData);
-  //   ADMIN.register(userData).then((res) => {
-  //     console.log(res);
-  //   });
-  // };
+  const userData = { username: "tniles320@gmail.com", password: "password" };
+  const register = () => {
+    console.log(userData);
+    ADMIN.register(userData).then((res) => {
+      console.log(res);
+    });
+  };
 
-  // useEffect(() => {
-  //   register();
-  // }, []);
+  useEffect(() => {
+    register();
+  }, []);
 
   return (
     <div className="loginContainer">
