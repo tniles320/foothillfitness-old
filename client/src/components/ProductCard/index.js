@@ -8,6 +8,7 @@ function ProductCard(props) {
   const { product } = props;
   const { loggedIn } = useContext(AdminContext);
   const productLink = `/admin/${product.category}/${product._id}`;
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
 
   const handleDeleteButton = () => {
     if (window.confirm("Are you sure you want to delete this?") === true) {
@@ -50,7 +51,7 @@ function ProductCard(props) {
         </button>
         <Link to={productLink} className="productLink">
           <img
-            src={`http://localhost:3001/public/uploads/${product.image}`}
+            src={s3FileURL + product.image}
             alt="editor"
             className="productImage"
           />
@@ -69,7 +70,7 @@ function ProductCard(props) {
           className="productLink"
         >
           <img
-            src={`http://localhost:3001/public/uploads/${product.image}`}
+            src={s3FileURL + product.image}
             alt="editor"
             className="productImage"
           />

@@ -24,10 +24,11 @@ function AdminAddProduct() {
     const formData = new FormData();
     formData.append("file", file);
     await API.addUpload(formData).then((res) => {
+      console.log(res.data);
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
-        setNewProduct({ ...newProduct, image: res.data.filename });
+        setNewProduct({ ...newProduct, image: res.data });
         alert("Image uploaded!");
       }
     });

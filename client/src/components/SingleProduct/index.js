@@ -45,6 +45,7 @@ function SingleProduct(props) {
   const { product } = props;
   const { loggedIn } = useContext(AdminContext);
   const [editProduct, setEditProduct] = useState({});
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
 
   const handleEditProduct = async () => {
     if (product.category === "strength") {
@@ -73,7 +74,7 @@ function SingleProduct(props) {
     return (
       <div className="singleProductContainer">
         <img
-          src={`http://localhost:3001/public/uploads/${product.image}`}
+          src={s3FileURL + product.image}
           alt={product.name}
           className="singleImage"
         />
@@ -125,7 +126,7 @@ function SingleProduct(props) {
     return (
       <div className="singleProductContainer">
         <img
-          src={`http://localhost:3001/public/uploads/${product.image}`}
+          src={s3FileURL + product.image}
           alt={product.name}
           className="singleImage"
         />

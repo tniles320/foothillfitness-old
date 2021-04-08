@@ -22,7 +22,7 @@ function AdminBrand() {
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
-        setNewBrand({ ...newBrand, image: res.data.filename });
+        setNewBrand({ ...newBrand, image: res.data });
         alert("Image uploaded!");
       }
     });

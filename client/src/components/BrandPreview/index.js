@@ -2,11 +2,12 @@ import "./style.css";
 
 function BrandPreview(props) {
   const { newBrand } = props;
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
 
   return (
     <div className="brandPreviewContainer">
       <img
-        src={`http://localhost:3001/public/uploads/${newBrand.image}`}
+        src={s3FileURL + newBrand.image}
         alt={newBrand.name}
         className="brandImagePreview"
       />

@@ -5,6 +5,7 @@ import "./style.css";
 const EditFeaturedList = (props) => {
   const { content } = props;
   const [editFeatured, setEditFeatured] = useState({});
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
 
   const handleEditFeatured = () => {
     API.updateFeatured(content._id, editFeatured).then((res) => {
@@ -41,7 +42,7 @@ const EditFeaturedList = (props) => {
     <div className="editFeatured">
       <div className="editLink">
         <img
-          src={`http://localhost:3001/public/uploads/${content.image}`}
+          src={s3FileURL + content.image}
           alt="editor"
           className="editImage"
         />

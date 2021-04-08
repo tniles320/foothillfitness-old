@@ -5,6 +5,8 @@ import "./glide.core.min.css";
 import "./glide.theme.min.css";
 import "./style.css";
 
+const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
+
 const FeaturedElement = (props) => {
   const { content } = props;
   return (
@@ -12,7 +14,7 @@ const FeaturedElement = (props) => {
       <div className="featuredLink">
         <img
           className="featuredImage"
-          src={`http://localhost:3001/public/uploads/${content.image}`}
+          src={s3FileURL + content.image}
           alt="featured post"
         />
         <div className="featuredContainer">

@@ -48,12 +48,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 require("./config/passportConfig")(passport);
 
-const directory = path.join(__dirname, "public/uploads");
-app.use("/public/uploads", express.static(directory));
+// const directory = path.join(__dirname, "public/uploads");
+// app.use("/public/uploads", express.static(directory));
 
-app.get("/api/upload/:file", function (req, res) {
-  res.sendFile(`${__dirname}/public/uploads/${req.params.file}`);
-});
+// require("dotenv").config();
+
+// app.get("/api/upload/:file", function (req, res) {
+//   const s3FileURL = process.env.AWS_Uploaded_File_URL_LINK;
+//   res.sendFile(s3FileURL + req.params.file);
+// });
 
 // using api routes
 app.use(routes);

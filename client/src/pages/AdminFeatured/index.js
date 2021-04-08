@@ -23,7 +23,7 @@ function AdminFeatured() {
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
-        setNewFeatured({ ...newFeatured, image: res.data.filename });
+        setNewFeatured({ ...newFeatured, image: res.data });
         alert("Image uploaded!");
       }
     });

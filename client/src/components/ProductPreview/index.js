@@ -2,10 +2,12 @@ import "./style.css";
 
 function ProductPreview(props) {
   const { newProduct } = props;
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
+
   return (
     <div className="productPreviewContainer">
       <img
-        src={`http://localhost:3001/public/uploads/${newProduct.image}`}
+        src={s3FileURL + newProduct.image}
         alt={newProduct.name}
         className="imagePreview"
       />

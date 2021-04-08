@@ -2,11 +2,13 @@ import "./style.css";
 
 function FeaturedPreview(props) {
   const { newFeatured } = props;
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
+
   return (
     <div className="featuredPreviewContainer">
       <img
         className="featuredImagePreview"
-        src={`http://localhost:3001/public/uploads/${newFeatured.image}`}
+        src={s3FileURL + newFeatured.image}
         alt="featured post"
       />
       <div className="featuredTextContainerPreview">

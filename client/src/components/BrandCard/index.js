@@ -6,6 +6,7 @@ import "./style.css";
 function BrandCard(props) {
   const { brand } = props;
   const { loggedIn } = useContext(AdminContext);
+  const s3FileURL = process.env.REACT_APP_AWS_URL_LINK;
 
   const handleDeleteButton = () => {
     if (window.confirm("Are you sure you want to delete this?") === true) {
@@ -35,7 +36,7 @@ function BrandCard(props) {
           className="brandLink"
         >
           <img
-            src={`http://localhost:3001/public/uploads/${brand.image}`}
+            src={s3FileURL + brand.image}
             alt={`${brand.name} logo`}
             className="brandImage"
           />
@@ -52,7 +53,7 @@ function BrandCard(props) {
           className="brandLink"
         >
           <img
-            src={`http://localhost:3001/public/uploads/${brand.image}`}
+            src={s3FileURL + brand.image}
             alt={`${brand.name} logo`}
             className="brandImage"
           />
