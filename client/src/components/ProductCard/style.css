@@ -48,6 +48,7 @@
 
 .productBrand {
     margin-top: 5px;
+    font-weight: bold;
 }
 
 .productName {
@@ -119,6 +120,7 @@
     
     .saleBanner {
         font-size: 0.7rem;
+        margin-top: 4px;
     }
 
     .deleteProduct {
