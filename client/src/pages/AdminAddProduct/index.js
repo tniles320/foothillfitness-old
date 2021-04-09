@@ -24,7 +24,6 @@ function AdminAddProduct() {
     const formData = new FormData();
     formData.append("file", file);
     await API.addUpload(formData).then((res) => {
-      console.log(res);
       if (res.status === 422) {
         alert("Error uploading image");
       } else {
@@ -41,9 +40,7 @@ function AdminAddProduct() {
     e.preventDefault();
     if (newProduct.category === "strength") {
       API.addStrength(newProduct).then((res) => {
-        console.log(res);
         if (res.status === 422) {
-          console.log(res);
           alert("Error adding product");
         } else {
           alert("New Product added successfully!");
@@ -52,7 +49,6 @@ function AdminAddProduct() {
     } else if (newProduct.category === "cardio") {
       API.addCardio(newProduct).then((res) => {
         if (res.status === 422) {
-          console.log(res);
           alert("Error adding product");
         } else {
           alert("New Product added successfully!");

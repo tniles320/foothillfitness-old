@@ -56,6 +56,7 @@ function ProductCard(props) {
             className="productImage"
           />
           <div className="productTextContainer">
+            <div className="productBrand">{product.brand}</div>
             <div className="productName">{product.name}</div>
             <SaleBanner />
           </div>

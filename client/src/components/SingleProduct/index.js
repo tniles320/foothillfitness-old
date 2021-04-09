@@ -79,6 +79,14 @@ function SingleProduct(props) {
           className="singleImage"
         />
         <div className="singleEditContainer">
+          <label htmlFor="singleBrand">Brand</label>
+          <input
+            className="singleEditBrand"
+            defaultValue={product.brand}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, brand: e.target.value })
+            }
+          ></input>
           <label htmlFor="singleName">Name</label>
           <input
             className="singleEditName"
