@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://us-central1-foothill-fitness.cloudfunctions.net/api",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "@testing-library/jest-dom": "^5.11.9",

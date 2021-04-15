@@ -66,4 +66,4 @@ app.use(routes);
 //   console.log(`🌎 ==> API server now on port ${PORT}!`);
 // });
 
-exports.app = functions.https.onRequest(app);
+exports.api = functions.https.onRequest(app);
