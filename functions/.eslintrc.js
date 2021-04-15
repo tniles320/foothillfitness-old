@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable quote-props */
 module.exports = {
   root: true,
   env: {
@@ -12,8 +14,5 @@ module.exports = {
     "object-curly-spacing": ["error", "always"],
     "new-cap": ["error", { capIsNew: false }],
     "space-before-function-paren": ["error", "always"],
-    "parser-options": {
-      ecmaVersion: 8,
-    },
   },
 };
