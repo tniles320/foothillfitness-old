@@ -1,14 +1,14 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
+// const path = require("path");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
+// const passportLocal = require("passport-local").Strategy;
 const cookieParser = require("cookie-parser");
 const routes = require("./routes");
 const functions = require("firebase-functions");
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
 const app = express();
 

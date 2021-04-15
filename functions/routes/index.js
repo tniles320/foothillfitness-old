@@ -7,7 +7,7 @@ const adminRoutes = require("./admin");
 router.use("/api", apiRoutes);
 router.use("/admin", adminRoutes);
 
-//React app Route
+// React app Route
 router.use(function (req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });

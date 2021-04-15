@@ -17,7 +17,7 @@ router.post("/", upload.single("file"), function (req, res) {
     region: process.env.AWS_REGION,
   });
 
-  //Where you want to store your file
+  // Where you want to store your file
 
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
